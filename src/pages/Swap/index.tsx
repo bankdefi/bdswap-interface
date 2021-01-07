@@ -304,7 +304,7 @@ export default function Swap() {
               otherCurrency={currencies[Field.OUTPUT]}
               id="swap-currency-input"
             />
-            <AutoColumn justify="space-between" style={{marginTop:'-30px',marginBottom:'-30px',position:'relative',zIndex:2}}>
+            <AutoColumn justify="space-between" style={{marginTop:'-60px',marginBottom:'-50px',position:'relative',zIndex:2}}>
               <AutoRow justify='center' style={{ padding: '0 1rem' }}>
                 <ArrowWrapper onClick={() => {
                       setApprovalSubmitted(false) // reset 2 step UI for approvals

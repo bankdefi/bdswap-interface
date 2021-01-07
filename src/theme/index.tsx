@@ -224,6 +224,10 @@ div[data-reach-dialog-content] a
 {
   color:#0071bc ;
 }
+#swap-currency-output-2
+{
+  margin-top:-10px;
+}
 #logo-background
 {
   background: linear-gradient(90deg, rgb(0, 169, 157) 0%, rgb(40, 171, 224) 100%);
