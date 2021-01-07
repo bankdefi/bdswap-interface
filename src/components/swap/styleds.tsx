@@ -12,13 +12,14 @@ export const Wrapper = styled.div`
 export const ArrowWrapper = styled.div<{ clickable: boolean }>`
   padding: 2px;
   transition:0.2s all;
+  background:linear-gradient(135deg, rgba(0,169,157,1) 0%, rgba(0,113,188,1) 100%);
   ${({ clickable }) =>
     clickable
       ? css`
           :hover {
             cursor: pointer;
             opacity: 0.8;
-            background:white;
+            zoom:1.2;
             color:#313131;
           }
           :hover svg {
@@ -32,7 +33,7 @@ export const ArrowWrapper = styled.div<{ clickable: boolean }>`
 export const SectionBreak = styled.div`
   height: 1px;
   width: 100%;
-  background-color: #FFFFFF80;
+  background-color: #99999980;
 `
 
 export const BottomGrouping = styled.div`
@@ -53,7 +54,7 @@ export const ErrorText = styled(Text)<{ severity?: 0 | 1 | 2 | 3 | 4 }>`
 export const StyledBalanceMaxMini = styled.button`
   height: 22px;
   width: 22px;
-  background-color: ${({ theme }) => theme.bg2};
+  background: linear-gradient(135deg,rgba(0,169,157,1) 0%,rgba(0,113,188,1) 100%);
   border: none;
   border-radius: 50%;
   padding: 0.2rem;
@@ -61,7 +62,7 @@ export const StyledBalanceMaxMini = styled.button`
   font-weight: 400;
   margin-left: 0.4rem;
   cursor: pointer;
-  color: ${({ theme }) => theme.text2};
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;

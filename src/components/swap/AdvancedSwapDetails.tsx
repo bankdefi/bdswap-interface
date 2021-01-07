@@ -38,13 +38,13 @@ function TradeSummary({ trade, allowedSlippage }: { trade: Trade; allowedSlippag
       <AutoColumn style={{ padding: '0 20px' }}>
         <RowBetween>
           <RowFixed>
-            <TYPE.black fontSize={14} fontWeight={400} color={theme.text2}>
+            <TYPE.black fontSize={14} fontWeight={400} color="#999999" alt={theme.text2}>
               {isExactIn ? t('minimumReceived') : t('maximumSold')}
             </TYPE.black>
-            <QuestionHelper text={t('helper1')} />
+            <QuestionHelper  text={t('helper1')} />
           </RowFixed>
           <RowFixed>
-            <TYPE.black color={theme.text1} fontSize={14}>
+            <TYPE.black  color="#999999"  fontSize={14}>
               {isExactIn
                 ? `${slippageAdjustedAmounts[Field.OUTPUT]?.toSignificant(4)} ${trade.outputAmount.currency.symbol}` ??
                   '-'
@@ -55,7 +55,7 @@ function TradeSummary({ trade, allowedSlippage }: { trade: Trade; allowedSlippag
         </RowBetween>
         <RowBetween>
           <RowFixed>
-            <TYPE.black fontSize={14} fontWeight={400} color={theme.text2}>
+            <TYPE.black fontSize={14} fontWeight={400}  color="#999999" >
               {t('priceImpact')}
             </TYPE.black>
             <QuestionHelper text={t('helper2')} />
@@ -65,12 +65,12 @@ function TradeSummary({ trade, allowedSlippage }: { trade: Trade; allowedSlippag
 
         <RowBetween>
           <RowFixed>
-            <TYPE.black fontSize={14} fontWeight={400} color={theme.text2}>
+            <TYPE.black fontSize={14} fontWeight={400}  color="#999999" >
               {t('liquidityProviderFee')}
             </TYPE.black>
             <QuestionHelper text={t('helper3')} />
           </RowFixed>
-          <TYPE.black fontSize={14} color={theme.text1}>
+          <TYPE.black fontSize={14}  color="#999999" >
             {realizedLPFee ? `${realizedLPFee.toSignificant(4)} ${trade.inputAmount.currency.symbol}` : '-'}
           </TYPE.black>
         </RowBetween>
@@ -100,7 +100,7 @@ export function AdvancedSwapDetails({ trade }: AdvancedSwapDetailsProps) {
               <SectionBreak />
               <AutoColumn style={{ padding: '0 24px' }}>
                 <RowFixed>
-                  <TYPE.black fontSize={14} fontWeight={400} color={theme.text2}>
+                  <TYPE.black fontSize={14} fontWeight={400} color="#999999" alt={theme.text2}>
                     Route
                   </TYPE.black>
                   <QuestionHelper text="Routing through these tokens resulted in the best price for your trade." />

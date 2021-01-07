@@ -25,9 +25,9 @@ const CurrencySelect = styled.button<{ selected: boolean }>`
   height: 2.2rem;
   font-size: 20px;
   font-weight: 500;
-  background-color: ${({ selected, theme }) => (selected ? 'white' : theme.primary1)};
+  background-color: ${({ selected, theme }) => (selected ? 'white' : '#2472e0')};
   color: ${({ selected, theme }) => (selected ? 'black' : theme.white)};
-  border-radius:10px;
+  border-radius:5px;
   box-shadow: ${({ selected }) => (selected ? 'none' : '0px 6px 10px rgba(0, 0, 0, 0.075)')};
   outline: none;
   cursor: pointer;
@@ -37,7 +37,7 @@ const CurrencySelect = styled.button<{ selected: boolean }>`
 
   :focus,
   :hover {
-    background-color: ${({ selected, theme }) => (selected ? darken(0.05, 'white') : darken(0.05, theme.primary1))};
+    background-color: ${({ selected, theme }) => (selected ? darken(0.05, 'white') : darken(0.05, '#2472e0'))};
   }
 `
 
@@ -67,7 +67,7 @@ const StyledDropDown = styled(DropDown)<{ selected: boolean }>`
 
   path {
     stroke: '#313131';
-    stroke-width: 1.5px;
+    stroke-width: 2px;
   }
 `
 
@@ -75,7 +75,6 @@ const InputPanel = styled.div<{ hideInput?: boolean }>`
   ${({ theme }) => theme.flexColumnNoWrap}
   position: relative;
   border-radius:10px;
-  background-color: ${({ theme }) => theme.bg2};
   z-index: 1;
 `
 
@@ -89,26 +88,23 @@ const StyledTokenName = styled.span<{ active?: boolean }>`
   ${({ active }) => (active ? '  margin: 0 0.25rem 0 0.75rem;' : '  margin: 0 0.25rem 0 0.25rem;')}
   font-size:  ${({ active }) => (active ? '20px' : '16px')};
   color:  ${({ active }) => (active ? '#313131' : '#fff')};
-  margin-left:5px;
+  margin-left:10px;
 `
 
 const StyledBalanceMax = styled.button`
   height: 28px;
-  background-color: ${({ theme }) => theme.primary5};
-  border: 1px solid ${({ theme }) => theme.primary5};
-  border-radius:10px;
+background-color:transparent;
   font-size: 0.875rem;
-
-  font-weight: 500;
+  border:0;
   cursor: pointer;
   margin-right: 0.5rem;
-  color: ${({ theme }) => theme.primaryText1};
+  color: #1d66cd;
+  font-weight:bold;
   :hover {
-    border: 1px solid ${({ theme }) => theme.primary1};
+    opacity:0.8;
   }
   :focus {
-    border: 1px solid ${({ theme }) => theme.primary1};
-    outline: none;
+    opacity:0.8;
   }
 
   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
@@ -163,18 +159,19 @@ export default function CurrencyInputPanel({
   }, [setModalOpen])
   return (
     <InputPanel id={id}>
-      <Container hideInput={hideInput} style={{borderRadius:10, backgroundColor:'#1a3d77', border:0}}>
+      <Container hideInput={hideInput} style={{borderRadius:20, backgroundColor:'#f2f2f2', border:0}}>
         {!hideInput && (
           <LabelRow>
             <RowBetween>
-              <TYPE.body color={theme.text2} fontWeight={500} fontSize={16}>
+              <TYPE.body color="#999999" fontWeight={500} fontSize={16}>
                 {label}
               </TYPE.body>
               {account && (
                 <TYPE.body
                   onClick={onMax}
-                  color={theme.text2}
-                  fontWeight={500}
+                  color={"#999999"}
+                  alt={theme.text2}
+                  fontWeight={"500"}
                   fontSize={14}
                  
                   style={{ display: 'inline', cursor: 'pointer'}}
@@ -191,7 +188,7 @@ export default function CurrencyInputPanel({
           {!hideInput && (
             <>
               <NumericalInput
-                style={{backgroundColor:'transparent',color:'#FFE600'}}
+                style={{backgroundColor:'transparent',color:'#2472e0'}}
                 
                 className="token-amount-input"
                 value={value}

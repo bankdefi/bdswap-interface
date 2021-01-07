@@ -35,7 +35,9 @@ const white = '#FFFFFF'
 const black = '#313131'
 
 export function colors(darkMode: boolean): Colors {
+  
   return {
+    
     // base
     white,
     black,
@@ -210,14 +212,8 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  font-feature-settings: 'ss01' on, 'ss02' on, 'cv01' on, 'cv03' on;
-  
-  background: url(images/hexagons.png), -moz-linear-gradient(45deg, rgba(16, 114, 189, 1) 0%, rgba(16, 114, 189, 1) 23%, rgba(2, 41, 97, 1) 48%, rgba(0, 4, 38, 1) 73%, rgba(0, 0, 21, 1) 100%);
-			background: url(images/hexagons.png),-webkit-linear-gradient(45deg, rgba(16, 114, 189, 1) 0%, rgba(16, 114, 189, 1) 23%, rgba(2, 41, 97, 1) 48%, rgba(0, 4, 38, 1) 73%, rgba(0, 0, 21, 1) 100%);
-			background: url(images/hexagons.png),-o-linear-gradient(45deg, rgba(16, 114, 189, 1) 0%, rgba(16, 114, 189, 1) 23%, rgba(2, 41, 97, 1) 48%, rgba(0, 4, 38, 1) 73%, rgba(0, 0, 21, 1) 100%);
-			background: url(images/hexagons.png),-ms-linear-gradient(45deg, rgba(16, 114, 189, 1) 0%, rgba(16, 114, 189, 1) 23%, rgba(2, 41, 97, 1) 48%, rgba(0, 4, 38, 1) 73%, rgba(0, 0, 21, 1) 100%);
-			background: url(images/hexagons.png),linear-gradient(45deg, rgba(16, 114, 189, 1) 0%, rgba(16, 114, 189, 1) 23%, rgba(2, 41, 97, 1) 48%, rgba(0, 4, 38, 1) 73%, rgba(0, 0, 21, 1) 100%);
-			
+  background:#e6e6e6 !important;
+ 
 }
 div[data-reach-dialog-content] a
 {
@@ -250,7 +246,7 @@ div[data-reach-dialog-content] a
 
 .token-amount-input::placeholder
 {
-  color:rgba(255,255,255,0.5) !important;
+  color:rgba(36,114,224,0.7) !important;
 }
 
 #shadow_bottom

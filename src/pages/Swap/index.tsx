@@ -274,7 +274,7 @@ export default function Swap() {
         tokens={urlLoadedTokens}
         onConfirm={handleConfirmTokenWarning}
       />
-      <img src="./images/Logo_Whiteyellow.svg" id="center-logo" width="400" alt="logo"/>
+
       <AppBody>
         <SwapPoolTabs active={'swap'} />
         <Wrapper id="swap-page">
@@ -309,12 +309,12 @@ export default function Swap() {
                 <ArrowWrapper onClick={() => {
                       setApprovalSubmitted(false) // reset 2 step UI for approvals
                       onSwitchTokens()
-                    }} clickable style={{borderRadius:"50%",border:'1px solid white',padding:5,marginTop:0,marginBottom:0,width:35,height:35,lineHeight:'25px',paddingTop:10,display:'inline-flex'}}>
-                  <ChevronDown style={{marginRight:'-5px'}}
-                    size="14" color={theme.text2}
+                    }} clickable style={{borderRadius:"50%",border:'1px solid white',padding:5,marginTop:0,marginBottom:0,width:35,height:35,lineHeight:'25px',paddingTop:8,display:'inline-flex'}}>
+                  <ChevronDown style={{marginRight:'-2px',strokeWidth:6,stroke:'white'}}
+                    size="18" color={theme.text2}
                   />
                   <ChevronUp
-                    size="14" color={theme.text2}
+                    size="18" color={theme.text2}  style={{strokeWidth:6,stroke:'white'}}
                   />
                 </ArrowWrapper>
                 
@@ -354,7 +354,7 @@ export default function Swap() {
                 <AutoColumn gap="4px">
                   {Boolean(trade) && (
                     <RowBetween align="center">
-                      <Text fontWeight={500} fontSize={14} color={theme.text2}>
+                      <Text fontWeight={500} fontSize={14} color={"#999999"}>
                         {t('price')}
                       </Text>
                       <TradePrice
@@ -366,10 +366,10 @@ export default function Swap() {
                   )}
                   {allowedSlippage !== INITIAL_ALLOWED_SLIPPAGE && (
                     <RowBetween align="center">
-                      <ClickableText fontWeight={500} fontSize={14} color={theme.text2} onClick={toggleSettings}>
+                      <ClickableText fontWeight={500} fontSize={14} color={"#999999"} onClick={toggleSettings}>
                         {t('slippageTolerance')}
                       </ClickableText>
-                      <ClickableText fontWeight={500} fontSize={14} color={theme.text2} onClick={toggleSettings}>
+                      <ClickableText fontWeight={500} fontSize={14} color={"#999999"} onClick={toggleSettings}>
                         {allowedSlippage / 100}%
                       </ClickableText>
                     </RowBetween>
@@ -380,7 +380,7 @@ export default function Swap() {
           </AutoColumn>
           <BottomGrouping>
             {!account ? (
-              <ButtonLight onClick={toggleWalletModal}><LogIn style={{marginRight:5}} size="18" color="#313131"/> {t('connectWallet')}</ButtonLight>
+              <ButtonLight onClick={toggleWalletModal}><LogIn style={{marginRight:5}} size="18" color="#FFFFFF"/> {t('connectWallet')}</ButtonLight>
             ) : showWrap ? (
               <ButtonPrimary disabled={Boolean(wrapInputError)} onClick={onWrap}>
                 {wrapInputError ??

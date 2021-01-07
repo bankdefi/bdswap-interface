@@ -51,7 +51,7 @@ const BodyWrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding-top: 60px;
+  padding-top: 5%;
   align-items: center;
   flex: 1;
   overflow-y: auto;
@@ -60,7 +60,7 @@ const BodyWrapper = styled.div`
 
   ${({ theme }) => theme.mediaWidth.upToSmall`
     padding: 16px;
-    padding-top: 2rem;
+    padding-top: 1rem;
   `};
 
   z-index: 1;
@@ -81,8 +81,7 @@ export default function App() {
     <Suspense fallback={null}>
       <Route component={GoogleAnalyticsReporter} />
       <Route component={DarkModeQueryParamReader} />
-      
-	    <div id="shadow_bottom"></div>
+     
       <AppWrapper>
         <URLWarning />
         <HeaderWrapper>

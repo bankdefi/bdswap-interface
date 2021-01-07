@@ -16,7 +16,7 @@ const Base = styled(RebassButton)<{
   width: ${({ width }) => (width ? width : '100%')};
   font-weight: 500;
   text-align: center;
-  border-radius: 10px;
+  border-radius:20px;
   outline: none;
   border: 1px solid transparent;
   color: white;
@@ -41,6 +41,7 @@ export const ButtonPrimary = styled(Base)`
   background-color: #FFE600;
   color: #313131;
   text-decoration: none;
+  border-radius:20px;
   &:focus {
     box-shadow: 0 0 0 1pt ${({ theme }) => lighten(0.1, '#FFE600')};
     background-color: ${({ theme }) => lighten(0.1, '#FFE600')};
@@ -55,8 +56,8 @@ export const ButtonPrimary = styled(Base)`
   }
   &:disabled {
    
-    background-color: ${({ theme, altDisabledStyle }) => (altDisabledStyle ? '#002868' : '#002868')};
-    color: ${({ theme, altDisabledStyle }) => (altDisabledStyle ? '#3c9fd6' :  '#3c9fd6')};
+    background-color: ${({ theme, altDisabledStyle }) => (altDisabledStyle ? '#4d4d4d' : '#4d4d4d')};
+    color: ${({ theme, altDisabledStyle }) => (altDisabledStyle ? '#999999' :  '#999999')};
     cursor: auto;
     box-shadow: none;
     border: 1px solid transparent;
@@ -66,9 +67,9 @@ export const ButtonPrimary = styled(Base)`
 `
 
 export const ButtonLight = styled(Base)`
-  background-color: #FFE600;
+  background: linear-gradient(90deg, rgba(0,169,157,1) 0%, rgba(0,113,188,1) 100%);
   text-decoration: none;
-  color: #313131;
+  color: #FFFFFF;
   font-size: 20px;
   font-weight: 500;
   &:focus {
