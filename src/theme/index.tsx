@@ -35,7 +35,7 @@ const white = '#FFFFFF'
 const black = '#313131'
 
 export function colors(darkMode: boolean): Colors {
-  
+  darkMode = false;
   return {
     
     // base
@@ -215,11 +215,27 @@ html {
   background:#e6e6e6 !important;
  
 }
+body
+{
+  background-image:none !important;
+  
+}
 div[data-reach-dialog-content] a
 {
-  color:#FFE600 ;
+  color:#0071bc ;
 }
-
+#logo-background
+{
+  background: linear-gradient(90deg, rgb(0, 169, 157) 0%, rgb(40, 171, 224) 100%);
+  padding: 8px;
+  padding-left:10px;
+  padding-right:10px;
+  position: absolute;
+  top: 0px;
+  padding-top: 20px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
 #center-logo
 {
   margin-bottom:40px;
@@ -248,6 +264,34 @@ div[data-reach-dialog-content] a
 {
   color:rgba(36,114,224,0.7) !important;
 }
+#pseudo-loader
+{
+  position: absolute;
+  filter: drop-shadow(10px 10px 10px #0000002e) drop-shadow(-10px -10px 10px #ffffffbf);
+  animation: none;
+}
+#deco_bg_buttom
+{
+  background: url(./images/bg_shape.svg);
+    position: fixed;
+    bottom: -200px;
+    left: -300px;
+    z-index: -1;
+    width: 1000px;
+    height: 600px;
+    background-repeat: no-repeat;
+}
+#deco_bg_top
+{
+  background: url(./images/bg_shape.svg);
+    position: fixed;
+    top: 0px;
+    right: -300px;
+    z-index: -1;
+    width: 1000px;
+    height: 600px;
+    background-repeat: no-repeat;
+}
 
 #shadow_bottom
 		{
@@ -260,6 +304,14 @@ div[data-reach-dialog-content] a
     }
     
 @media only screen and (max-width: 960px) {
+  #logo-background
+  {
+    background:transparent !important;
+  }
+  #header-link
+  {
+    margin-left:0;
+  }
   #shadow_bottom
 		{
       opacity:0.6;
@@ -285,7 +337,7 @@ div[data-reach-dialog-content] a
     }
     #body-wrapper
     {
-      box-shadow: 0 0 50px #01001de6;
+     
     }
 }
 
@@ -295,11 +347,12 @@ div[data-reach-dialog-content] a
 }
 
 div[data-reach-dialog-overlay] {
-  background:rgba(20,30,75,0.80) !important;
+  background:rgba(255,255,255,0.70) !important;
 
 }
 div[data-reach-dialog-content]{
-  box-shadow: 0 0 100px #01001de6 !important;
+  box-shadow: 10px 10px 10px #0000002e, -10px -10px 10px #ffffffbf !important;
+  border-radius:20px !important;
 }
 .bfqITV
 {

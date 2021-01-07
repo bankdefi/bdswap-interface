@@ -147,7 +147,10 @@ export default function AddressClaimModal({ isOpen, onDismiss }: { isOpen: boole
           </RowBetween>
           <ConfirmedIcon>
             {!claimConfirmed ? (
+              <div>
+              <CustomLightSpinner id="pseudo-loader" src={Circle} alt="loader" size={'90px'} />
               <CustomLightSpinner src={Circle} alt="loader" size={'90px'} />
+              </div>
             ) : (
               <UniTokenAnimated width="72px" src={tokenLogo} />
             )}

@@ -28,6 +28,7 @@ export function LoadingView({ children, onDismiss }: { children: any; onDismiss:
         <CloseIcon onClick={onDismiss} />
       </RowBetween>
       <ConfirmedIcon>
+        <CustomLightSpinner id="pseudo-loader" src={Circle} alt="loader" size={'150px'} />
         <CustomLightSpinner src={Circle} alt="loader" size={'150px'} />
       </ConfirmedIcon>
       <AutoColumn gap="100px" justify={'center'}>
@@ -57,7 +58,7 @@ export function SubmittedView({
         <CloseIcon onClick={onDismiss} />
       </RowBetween>
       <ConfirmedIcon>
-        <ArrowUpCircle strokeWidth={0.5} size={150} color={'#FFE600'} />
+        <ArrowUpCircle strokeWidth={0.5} size={150} color={'#0071bc'} />
       </ConfirmedIcon>
       <AutoColumn gap="100px" justify={'center'}>
         {children}

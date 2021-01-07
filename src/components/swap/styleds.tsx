@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
 export const ArrowWrapper = styled.div<{ clickable: boolean }>`
   padding: 2px;
   transition:0.2s all;
-  background:linear-gradient(135deg, rgba(0,169,157,1) 0%, rgba(0,113,188,1) 100%);
+  background:linear-gradient(135deg, rgba(0,169,157,1) 0%, rgba(40,171,224,1) 100%);
   ${({ clickable }) =>
     clickable
       ? css`

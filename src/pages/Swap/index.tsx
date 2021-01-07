@@ -388,7 +388,7 @@ export default function Swap() {
               </ButtonPrimary>
             ) : noRoute && userHasSpecifiedInputOutput ? (
               <GreyCard style={{ textAlign: 'center' }}>
-                <TYPE.main mb="4px">{t('insufficientLiquidity')}</TYPE.main>
+                <TYPE.main mb="4px" color="#99999" fontSize="20px">{t('insufficientLiquidity')}</TYPE.main>
               </GreyCard>
             ) : showApproveFlow ? (
               <RowBetween>

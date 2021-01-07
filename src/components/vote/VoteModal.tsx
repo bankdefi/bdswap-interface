@@ -108,6 +108,7 @@ export default function VoteModal({ isOpen, onDismiss, proposalId, support }: Vo
             <StyledClosed onClick={wrappedOndismiss} />
           </RowBetween>
           <ConfirmedIcon>
+          <CustomLightSpinner id="pseudo-loader" src={Circle} alt="loader" size={'90px'} />
             <CustomLightSpinner src={Circle} alt="loader" size={'90px'} />
           </ConfirmedIcon>
           <AutoColumn gap="100px" justify={'center'}>

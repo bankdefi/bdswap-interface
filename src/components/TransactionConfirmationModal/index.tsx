@@ -42,6 +42,7 @@ function ConfirmationPendingContent({ onDismiss, pendingText }: { onDismiss: () 
           <CloseIcon onClick={onDismiss} />
         </RowBetween>
         <ConfirmedIcon>
+          <CustomLightSpinner id="pseudo-loader" src={Circle} alt="loader" size={'150px'} />
           <CustomLightSpinner src={Circle} alt="loader" size={'150px'} />
         </ConfirmedIcon>
         <AutoColumn gap="12px" justify={'center'}>
@@ -81,7 +82,7 @@ function TransactionSubmittedContent({
           <CloseIcon onClick={onDismiss} />
         </RowBetween>
         <ConfirmedIcon>
-          <ArrowUpCircle strokeWidth={0.5} size={150} color="#FFE600" />
+          <ArrowUpCircle strokeWidth={0.5} size={150} color="#0071bc" />
         </ConfirmedIcon>
         <AutoColumn gap="12px" justify={'center'}>
           <Text fontWeight={500} fontSize={20}>
@@ -89,7 +90,7 @@ function TransactionSubmittedContent({
           </Text>
           {chainId && hash && (
             <ExternalLink href={getEtherscanLink(chainId, hash, 'transaction')}>
-              <Text fontWeight={500} fontSize={14} color="#FFE600">
+              <Text fontWeight={500} fontSize={14} color="#0071bc">
                 {t('viewOn')}
               </Text>
             </ExternalLink>

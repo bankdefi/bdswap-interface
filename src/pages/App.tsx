@@ -81,7 +81,8 @@ export default function App() {
     <Suspense fallback={null}>
       <Route component={GoogleAnalyticsReporter} />
       <Route component={DarkModeQueryParamReader} />
-     
+      <div id="deco_bg_buttom"></div>
+      <div id="deco_bg_top"></div>
       <AppWrapper>
         <URLWarning />
         <HeaderWrapper>

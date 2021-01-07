@@ -274,7 +274,7 @@ export default function Manage({
                 </div>
                 {stakingInfo?.earnedAmount && JSBI.notEqual(BIG_INT_ZERO, stakingInfo?.earnedAmount?.raw) && (
                   <ButtonEmpty
-                    style={{color:'#FFE600'}}
+                    style={{color:'#0071bc'}}
                     padding="8px"
                     borderRadius="8px"
                     width="fit-content"

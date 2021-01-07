@@ -38,26 +38,28 @@ const Base = styled(RebassButton)<{
 `
 
 export const ButtonPrimary = styled(Base)`
-  background-color: #FFE600;
-  color: #313131;
+  background:linear-gradient(90deg, rgba(0,169,157,1) 0%, rgba(40,171,224) 100%);
+  color: white;
   text-decoration: none;
   border-radius:20px;
   &:focus {
-    box-shadow: 0 0 0 1pt ${({ theme }) => lighten(0.1, '#FFE600')};
-    background-color: ${({ theme }) => lighten(0.1, '#FFE600')};
     
+    background: linear-gradient(90deg, rgba(0,169,157,1) 0%, rgba(40,171,224) 100%);
+    opacity:0.9;
   }
   &:hover {
-    background-color: ${({ theme }) => lighten(0.2, '#FFE600')};
+    background:linear-gradient(90deg, rgba(0,169,157,1) 0%, rgba(40,171,224) 100%);
+    opacity:0.9;
   }
   &:active {
-    box-shadow: 0 0 0 1pt ${({ theme }) => lighten(0.2, '#FFE600')};
-    background-color: ${({ theme }) => lighten(0.2, '#FFE600')};
+    
+    opacity:0.9;
+    background:linear-gradient(90deg, rgba(0,169,157,1) 0%, rgba(40,171,224) 100%);
   }
   &:disabled {
    
-    background-color: ${({ theme, altDisabledStyle }) => (altDisabledStyle ? '#4d4d4d' : '#4d4d4d')};
-    color: ${({ theme, altDisabledStyle }) => (altDisabledStyle ? '#999999' :  '#999999')};
+    background: ${({ theme, altDisabledStyle }) => (altDisabledStyle ? '#4d4d4d' : '#4d4d4d')} !important;
+    color: ${({ theme, altDisabledStyle }) => (altDisabledStyle ? '#999999' :  '#999999')} !important;
     cursor: auto;
     box-shadow: none;
     border: 1px solid transparent;

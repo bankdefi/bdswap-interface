@@ -14,7 +14,7 @@ const AdvancedDetailsFooter = styled.div<{ show: boolean }>`
   color: #999999;
   background-color: #FFFFFF;
   z-index: -1;
-  box-shadow:box-shadow: 2px 2px 8px #0000002e;
+  box-shadow: 2px 2px 8px #0000002e;
   transform: ${({ show }) => (show ? 'translateY(0%)' : 'translateY(-100%)')};
   transition: transform 300ms ease-in-out;
 `

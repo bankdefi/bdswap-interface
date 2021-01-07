@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next'
 
 import styled from 'styled-components'
 
-import Logo from '../../assets/svg/logows_white.svg'
+import Logo from '../../assets/svg/bdlogo_white.svg'
 
 import { useActiveWeb3React } from '../../hooks'
 
@@ -110,6 +110,7 @@ const HeaderRow = styled(RowFixed)`
 
 const HeaderLinks = styled(Row)`
   justify-content: center;
+  margin-left:60px;
   ${({ theme }) => theme.mediaWidth.upToMedium`
     padding: 1rem 1rem 1rem 1rem;
     justify-content: center;
@@ -199,10 +200,7 @@ const Title = styled.a`
 `
 
 const UniIcon = styled.div`
-  transition: transform 0.3s ease;
-  :hover {
-    transform: scale(1.2);
-  }
+  
 `
 
 const activeClassName = 'ACTIVE'
@@ -307,11 +305,12 @@ export default function Header() {
       
         <Title href="." id="logo-wrapper">
           <UniIcon>
-            <img id="logo-symbol" width={'36px'} src={Logo} alt="logo" />
-            
+            <div id="logo-background">
+              <img id="logo-symbol" width={'40px'} src={Logo} alt="logo" />
+            </div>
           </UniIcon>
         </Title>
-        <HeaderLinks>
+        <HeaderLinks id="header-link">
           <StyledNavLink id={`swap-nav-link`} to={'/swap'}>
             {t('swap')}
           </StyledNavLink>

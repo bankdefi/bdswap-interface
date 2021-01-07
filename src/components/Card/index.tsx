@@ -20,6 +20,7 @@ export const LightCard = styled(Card)`
 
 export const GreyCard = styled(Card)`
   background-color: rgba(1,1,1,0.5);
+  border-radius:20px;
 `
 
 export const OutlineCard = styled(Card)`
