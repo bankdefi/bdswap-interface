@@ -1,4 +1,4 @@
-import { Currency, Percent, Price } from '@wanswap/sdk'
+import { Currency, Percent, Price } from '@bdswap/sdk'
 import React, { useContext } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Text } from 'rebass'

@@ -1,5 +1,5 @@
 import { WASP } from './../../constants/index'
-import { Currency, CurrencyAmount, ETHER, JSBI, Token, TokenAmount } from '@wanswap/sdk'
+import { Currency, CurrencyAmount, ETHER, JSBI, Token, TokenAmount } from '@bdswap/sdk'
 import { useMemo } from 'react'
 import ERC20_INTERFACE from '../../constants/abis/erc20'
 import { useAllTokens } from '../../hooks/Tokens'
@@ -11,7 +11,7 @@ import { useUserUnclaimedAmount } from '../claim/hooks'
 import { useTotalUniEarned } from '../stake/hooks'
 
 /**
- * Returns a map of the given addresses to their eventually consistent WAN balances.
+ * Returns a map of the given addresses to their eventually consistent HT balances.
  */
 export function useETHBalances(
   uncheckedAddresses?: (string | undefined)[]

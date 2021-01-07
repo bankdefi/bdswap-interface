@@ -3,7 +3,7 @@ import { AutoColumn } from '../../components/Column'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
-import { JSBI, TokenAmount, ETHER } from '@wanswap/sdk'
+import { JSBI, TokenAmount, ETHER } from '@bdswap/sdk'
 import { RouteComponentProps } from 'react-router-dom'
 import DoubleCurrencyLogo from '../../components/DoubleLogo'
 import { useCurrency } from '../../hooks/Tokens'
@@ -123,7 +123,7 @@ export default function Manage({
   let valueOfTotalStakedAmountInWLSP: TokenAmount | undefined
 
   if (totalSupplyOfStakingToken && stakingTokenPair && stakingInfo && WETH) {
-    // take the total amount of LP tokens staked, multiply by WAN value of all LP tokens, divide by all LP tokens
+    // take the total amount of LP tokens staked, multiply by HT value of all LP tokens, divide by all LP tokens
     valueOfTotalStakedAmountInWETH = new TokenAmount(
       WETH,
       JSBI.divide(

@@ -228,12 +228,12 @@ export default function AccountDetails({
   const { t } = useTranslation()
 
   function formatConnectorName() {
-    const { wanchain } = window
-    const isWanchainMask = !!(wanchain && wanchain.isWanchainMask)
+    const { ethereum } = window
+    const isMetaMask = !!(ethereum && ethereum.isMetaMask)
     const name = Object.keys(SUPPORTED_WALLETS)
       .filter(
         k =>
-          SUPPORTED_WALLETS[k].connector === connector && (connector !== injected || isWanchainMask === (k === 'METAMASK'))
+          SUPPORTED_WALLETS[k].connector === connector && (connector !== injected || isMetaMask === (k === 'METAMASK'))
       )
       .map(k => SUPPORTED_WALLETS[k].name)[0]
     return <WalletName>Connected with {name}</WalletName>

@@ -1,4 +1,4 @@
-import { ChainId, FACTORY_ADDRESS, Pair, Token } from '@wanswap/sdk'
+import { ChainId, FACTORY_ADDRESS, Pair, Token } from '@bdswap/sdk'
 import flatMap from 'lodash.flatmap'
 import { useCallback, useMemo } from 'react'
 import { shallowEqual, useDispatch, useSelector } from 'react-redux'

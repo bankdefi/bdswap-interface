@@ -2,7 +2,7 @@ import React, { useCallback, useState } from 'react'
 import { AutoColumn } from '../../components/Column'
 import styled from 'styled-components'
 
-import { JSBI, TokenAmount, ETHER } from '@wanswap/sdk'
+import { JSBI, TokenAmount, ETHER } from '@bdswap/sdk'
 import { RouteComponentProps } from 'react-router-dom'
 import CurrencyLogo from '../../components/CurrencyLogo'
 import { useCurrency } from '../../hooks/Tokens'
@@ -158,7 +158,7 @@ export default function ManageHive({
               {stakingInfo?.totalRewardRate
                 ?.multiply((60 * 60 * 24 * 7/5).toString())
                 ?.toFixed(0, { groupSeparator: ',' }) ?? '-'}
-              {' WAN / week'}
+              {' HT / week'}
             </TYPE.body>
           </AutoColumn>
         </PoolData>
@@ -211,7 +211,7 @@ export default function ManageHive({
             <AutoColumn gap="sm">
               <RowBetween>
                 <div>
-                  <TYPE.black>Your unclaimed WAN</TYPE.black>
+                  <TYPE.black>Your unclaimed HT</TYPE.black>
                 </div>
                 {stakingInfo?.earnedAmount && JSBI.notEqual(BIG_INT_ZERO, stakingInfo?.earnedAmount?.raw) && (
                   <ButtonEmpty
@@ -244,7 +244,7 @@ export default function ManageHive({
                   {stakingInfo?.rewardRate
                     ?.multiply((60 * 60 * 24 * 7/5).toString())
                     ?.toFixed(4, { groupSeparator: ',' }) ?? '-'}
-                  {' WAN / week'}
+                  {' HT / week'}
                 </TYPE.black>
               </RowBetween>
             </AutoColumn>
@@ -254,7 +254,7 @@ export default function ManageHive({
           <span role="img" aria-label="wizard-icon" style={{ marginRight: '8px' }}>
             ⭐️
           </span>
-          When you withdraw, the contract will automagically claim WAN on your behalf!
+          When you withdraw, the contract will automagically claim HT on your behalf!
         </TYPE.main>
 
         {!showAddLiquidityButton && (

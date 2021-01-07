@@ -1,4 +1,4 @@
-import { Token, TokenAmount } from '@wanswap/sdk'
+import { Token, TokenAmount } from '@bdswap/sdk'
 import { useMemo } from 'react'
 
 import { usePairContract } from '../hooks/useContract'

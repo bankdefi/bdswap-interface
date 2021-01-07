@@ -1,5 +1,5 @@
 import { WASP } from './../../constants/index'
-import { TokenAmount, JSBI, ChainId } from '@wanswap/sdk'
+import { TokenAmount, JSBI, ChainId } from '@bdswap/sdk'
 import { TransactionResponse } from '@ethersproject/providers'
 import { useEffect, useState } from 'react'
 import { useActiveWeb3React } from '../../hooks'

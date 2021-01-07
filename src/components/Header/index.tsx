@@ -1,4 +1,4 @@
-import { ChainId, TokenAmount } from '@wanswap/sdk'
+import { ChainId, TokenAmount } from '@bdswap/sdk'
 import React, { useState } from 'react'
 import { Text } from 'rebass'
 import { NavLink } from 'react-router-dom'
@@ -326,24 +326,30 @@ export default function Header() {
           >
             {t('pool')}
           </StyledNavLink>
-          <StyledNavLink id={`stake-nav-link`} to={'/farm'}>
-            {t('miningPool')}
-          </StyledNavLink>
-          <StyledNavLink id={`stake-nav-link`} to={'/hive'}>
-            {t('hive')}
-          </StyledNavLink>
-          <StyledExternalLink id={`stake-nav-link`} href={'https://vote.wandevs.org/#/wanswap'}>
-            {t('vote')} <span style={{ fontSize: '11px' }}>↗</span>
-          </StyledExternalLink>
-          <StyledExternalLink id={`stake-nav-link`} href={'https://bridge.wanchain.org/'}>
-            {t('crossChain')} <span style={{ fontSize: '11px' }}>↗</span>
-          </StyledExternalLink>
-          <StyledExternalLink id={`stake-nav-link`} href={'https://wanlend.finance/'}>
-            {t('wanLend')} <span style={{ fontSize: '11px' }}>↗</span>
-          </StyledExternalLink>
-          <StyledExternalLink id={`stake-nav-link`} href={'https://auction.wanswap.finance/'}>
-            {t('auction')} <span style={{ fontSize: '11px' }}>↗</span>
-          </StyledExternalLink>
+          {
+            false && (<>
+              <StyledNavLink id={`stake-nav-link`} to={'/farm'}>
+                {t('miningPool')}
+              </StyledNavLink>
+              <StyledNavLink id={`stake-nav-link`} to={'/hive'}>
+                {t('hive')}
+              </StyledNavLink>
+              <StyledExternalLink id={`stake-nav-link`} href={'https://vote.wandevs.org/#/wanswap'}>
+                {t('vote')} <span style={{ fontSize: '11px' }}>↗</span>
+              </StyledExternalLink>
+              <StyledExternalLink id={`stake-nav-link`} href={'https://bridge.wanchain.org/'}>
+                {t('crossChain')} <span style={{ fontSize: '11px' }}>↗</span>
+              </StyledExternalLink>
+              <StyledExternalLink id={`stake-nav-link`} href={'https://wanlend.finance/'}>
+                {t('wanLend')} <span style={{ fontSize: '11px' }}>↗</span>
+              </StyledExternalLink>
+              <StyledExternalLink id={`stake-nav-link`} href={'https://auction.wanswap.finance/'}>
+                {t('auction')} <span style={{ fontSize: '11px' }}>↗</span>
+              </StyledExternalLink>
+              </>
+            )
+          }
+          
           {/* <StyledNavLink id={`stake-nav-link`} to={'/vote'}>
             {t('vote')}
           </StyledNavLink> */}
@@ -422,7 +428,7 @@ export default function Header() {
           <AccountElement active={!!account} style={{ pointerEvents: 'auto' }} >
             {account && userEthBalance ? (
               <BalanceText style={{ flexShrink: 0 }} pl="0.75rem" pr="0.5rem" fontWeight={500}>
-                {userEthBalance?.toSignificant(4)} WAN
+                {userEthBalance?.toSignificant(4)} HT
               </BalanceText>
             ) : null}
             <Web3Status />

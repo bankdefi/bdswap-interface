@@ -1,4 +1,4 @@
-import { JSBI, Pair, Percent } from '@wanswap/sdk'
+import { JSBI, Pair, Percent } from '@bdswap/sdk'
 import { darken } from 'polished'
 import React, { useState } from 'react'
 import { ChevronDown, ChevronUp } from 'react-feather'

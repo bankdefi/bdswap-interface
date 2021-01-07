@@ -8,15 +8,15 @@ describe('Remove Liquidity', () => {
   })
 
   it('eth remove', () => {
-    cy.visit('/remove/WAN/0xF9bA5210F91D0474bd1e1DcDAeC4C58E359AaD85')
-    cy.get('#remove-liquidity-tokena-symbol').should('contain.text', 'WAN')
+    cy.visit('/remove/HT/0xF9bA5210F91D0474bd1e1DcDAeC4C58E359AaD85')
+    cy.get('#remove-liquidity-tokena-symbol').should('contain.text', 'HT')
     cy.get('#remove-liquidity-tokenb-symbol').should('contain.text', 'MKR')
   })
 
   it('eth remove swap order', () => {
-    cy.visit('/remove/0xF9bA5210F91D0474bd1e1DcDAeC4C58E359AaD85/WAN')
+    cy.visit('/remove/0xF9bA5210F91D0474bd1e1DcDAeC4C58E359AaD85/HT')
     cy.get('#remove-liquidity-tokena-symbol').should('contain.text', 'MKR')
-    cy.get('#remove-liquidity-tokenb-symbol').should('contain.text', 'WAN')
+    cy.get('#remove-liquidity-tokenb-symbol').should('contain.text', 'HT')
   })
 
   it('loads the two correct tokens', () => {
@@ -25,7 +25,7 @@ describe('Remove Liquidity', () => {
     cy.get('#remove-liquidity-tokenb-symbol').should('contain.text', 'MKR')
   })
 
-  it('does not crash if WAN is duplicated', () => {
+  it('does not crash if HT is duplicated', () => {
     cy.visit('/remove/0xc778417E063141139Fce010982780140Aa0cD5Ab-0xc778417E063141139Fce010982780140Aa0cD5Ab')
     cy.get('#remove-liquidity-tokena-symbol').should('contain.text', 'WETH')
     cy.get('#remove-liquidity-tokenb-symbol').should('contain.text', 'WETH')

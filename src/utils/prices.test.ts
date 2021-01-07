@@ -1,4 +1,4 @@
-import { ChainId, JSBI, Pair, Route, Token, TokenAmount, Trade, TradeType } from '@wanswap/sdk'
+import { ChainId, JSBI, Pair, Route, Token, TokenAmount, Trade, TradeType } from '@bdswap/sdk'
 import { computeTradePriceBreakdown } from './prices'
 
 describe('prices', () => {

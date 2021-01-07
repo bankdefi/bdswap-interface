@@ -9,7 +9,7 @@ import { CardSection, DataCard, CardNoise, CardBGImage } from '../../components/
 import { Countdown } from './Countdown'
 import Loader from '../../components/Loader'
 import { useActiveWeb3React } from '../../hooks'
-import { Token, TokenAmount } from '@wanswap/sdk'
+import { Token, TokenAmount } from '@bdswap/sdk'
 
 const PageWrapper = styled(AutoColumn)`
   max-width: 640px;

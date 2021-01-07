@@ -1,4 +1,4 @@
-import { CurrencyAmount, JSBI, Token, Trade } from '@wanswap/sdk'
+import { CurrencyAmount, JSBI, Token, Trade } from '@bdswap/sdk'
 import React, { useCallback, useContext, useEffect, useMemo, useState } from 'react'
 import { ArrowDown,ChevronDown,ChevronUp,LogIn } from 'react-feather'
 import ReactGA from 'react-ga'

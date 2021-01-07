@@ -1,4 +1,4 @@
-import { Currency, ETHER, JSBI, TokenAmount } from '@wanswap/sdk'
+import { Currency, ETHER, JSBI, TokenAmount } from '@bdswap/sdk'
 import React, { useCallback, useEffect, useState } from 'react'
 import { Plus } from 'react-feather'
 import { useTranslation } from 'react-i18next'

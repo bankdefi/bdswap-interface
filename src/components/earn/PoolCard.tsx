@@ -4,7 +4,7 @@ import { RowBetween } from '../Row'
 import styled from 'styled-components'
 import { TYPE, StyledInternalLink } from '../../theme'
 import DoubleCurrencyLogo from '../DoubleLogo'
-import { ETHER, JSBI, TokenAmount } from '@wanswap/sdk'
+import { ETHER, JSBI, TokenAmount } from '@bdswap/sdk'
 import { ButtonPrimary } from '../Button'
 import { StakingInfo } from '../../state/stake/hooks'
 import { useColor } from '../../hooks/useColor'
@@ -104,7 +104,7 @@ export default function PoolCard({ stakingInfo }: { stakingInfo: StakingInfo }) 
   let valueOfTotalStakedAmountInWLSP: TokenAmount | undefined
 
   if (totalSupplyOfStakingToken && stakingTokenPair) {
-    // take the total amount of LP tokens staked, multiply by WAN value of all LP tokens, divide by all LP tokens
+    // take the total amount of LP tokens staked, multiply by HT value of all LP tokens, divide by all LP tokens
     valueOfTotalStakedAmountInWETH = new TokenAmount(
       WETH,
       JSBI.divide(

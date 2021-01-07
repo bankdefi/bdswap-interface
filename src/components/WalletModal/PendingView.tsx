@@ -1,4 +1,4 @@
-import { AbstractConnector } from '@web3-react-wan/abstract-connector'
+import { AbstractConnector } from '@web3-react/abstract-connector'
 import React from 'react'
 import styled from 'styled-components'
 import Option from './Option'
@@ -74,7 +74,7 @@ export default function PendingView({
   setPendingError: (error: boolean) => void
   tryActivation: (connector: AbstractConnector) => void
 }) {
-  const isWanchainMask = window?.wanchain?.isWanchainMask
+  const isMetamask = window?.ethereum?.isMetaMask
 
   return (
     <PendingSection>
@@ -104,10 +104,10 @@ export default function PendingView({
         const option = SUPPORTED_WALLETS[key]
         if (option.connector === connector) {
           if (option.connector === injected) {
-            if (isWanchainMask && option.name !== 'WanMask') {
+            if (isMetamask && option.name !== 'MetaMask') {
               return null
             }
-            if (!isWanchainMask && option.name === 'WanMask') {
+            if (!isMetamask && option.name === 'MetaMask') {
               return null
             }
           }

@@ -3,7 +3,7 @@ import { AutoColumn } from '../Column'
 import { RowBetween } from '../Row'
 import styled from 'styled-components'
 import { TYPE, StyledInternalLink } from '../../theme'
-import { ETHER } from '@wanswap/sdk'
+import { ETHER } from '@bdswap/sdk'
 import { ButtonPrimary } from '../Button'
 import { StakingInfo } from '../../state/stake/hooks'
 import { useColor } from '../../hooks/useColor'
@@ -134,7 +134,7 @@ export default function HiveCard({ stakingInfo, i }: { stakingInfo: StakingInfo;
           <TYPE.white> Pool rate </TYPE.white>
           <TYPE.white>{`${stakingInfo.totalRewardRate
             ?.multiply(`${60 * 60 * 24 * 7 / 5}`)
-            ?.toFixed(0, { groupSeparator: ',' })} WAN / week`}</TYPE.white>
+            ?.toFixed(0, { groupSeparator: ',' })} HT / week`}</TYPE.white>
         </RowBetween>
       </StatContainer>
 
@@ -152,7 +152,7 @@ export default function HiveCard({ stakingInfo, i }: { stakingInfo: StakingInfo;
               </span>
               {`${stakingInfo.rewardRate
                 ?.multiply(`${60 * 60 * 24 * 7 / 5}`)
-                ?.toFixed(4, { groupSeparator: ',' })} WAN / week`}
+                ?.toFixed(4, { groupSeparator: ',' })} HT / week`}
             </TYPE.black>
           </BottomSection>
         </>

@@ -1,4 +1,4 @@
-import { Trade, TradeType } from '@wanswap/sdk'
+import { Trade, TradeType } from '@bdswap/sdk'
 import React, { useContext } from 'react'
 import { useTranslation } from 'react-i18next'
 import 

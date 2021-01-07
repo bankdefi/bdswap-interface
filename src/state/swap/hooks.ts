@@ -1,7 +1,7 @@
 import useENS from '../../hooks/useENS'
 import { Version } from '../../hooks/useToggledVersion'
 import { parseUnits } from '@ethersproject/units'
-import { Currency, CurrencyAmount, ETHER, JSBI, Token, TokenAmount, Trade } from '@wanswap/sdk'
+import { Currency, CurrencyAmount, ETHER, JSBI, Token, TokenAmount, Trade } from '@bdswap/sdk'
 import { ParsedQs } from 'qs'
 import { useCallback, useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
@@ -36,7 +36,7 @@ export function useSwapActionHandlers(): {
       dispatch(
         selectCurrency({
           field,
-          currencyId: currency instanceof Token ? currency.address : currency === ETHER ? 'WAN' : ''
+          currencyId: currency instanceof Token ? currency.address : currency === ETHER ? 'HT' : ''
         })
       )
     },
@@ -223,10 +223,10 @@ function parseCurrencyFromURLParameter(urlParam: any): string {
   if (typeof urlParam === 'string') {
     const valid = isAddress(urlParam)
     if (valid) return valid
-    if (urlParam.toUpperCase() === 'WAN') return 'WAN'
-    if (valid === false) return 'WAN'
+    if (urlParam.toUpperCase() === 'HT') return 'HT'
+    if (valid === false) return 'HT'
   }
-  return 'WAN' ?? ''
+  return 'HT' ?? ''
 }
 
 function parseTokenAmountURLParameter(urlParam: any): string {

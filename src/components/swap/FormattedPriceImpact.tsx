@@ -1,4 +1,4 @@
-import { Percent } from '@wanswap/sdk'
+import { Percent } from '@bdswap/sdk'
 import React from 'react'
 import { ONE_BIPS } from '../../constants'
 import { warningSeverity } from '../../utils/prices'

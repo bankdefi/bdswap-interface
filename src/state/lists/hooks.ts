@@ -1,4 +1,4 @@
-import { ChainId, Token } from '@wanswap/sdk'
+import { ChainId, Token } from '@bdswap/sdk'
 import { Tags, TokenInfo, TokenList } from '@uniswap/token-lists'
 import { useMemo } from 'react'
 import { useSelector } from 'react-redux'
@@ -36,7 +36,9 @@ const EMPTY_LIST: TokenAddressMap = {
   [ChainId.RINKEBY]: {},
   [ChainId.ROPSTEN]: {},
   [ChainId.GÖRLI]: {},
-  [ChainId.MAINNET]: {}
+  [ChainId.MAINNET]: {},
+  ['128']: {},
+  ['256']: {},
 }
 
 const listCache: WeakMap<TokenList, TokenAddressMap> | null =

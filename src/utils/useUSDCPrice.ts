@@ -1,4 +1,4 @@
-import { ChainId, Currency, currencyEquals, JSBI, Price, WETH } from '@wanswap/sdk'
+import { ChainId, Currency, currencyEquals, JSBI, Price, WETH } from '@bdswap/sdk'
 import { useMemo } from 'react'
 import { USDT1, USDT } from '../constants'
 import { PairState, usePairs } from '../data/Reserves'

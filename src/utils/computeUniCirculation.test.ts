@@ -1,4 +1,4 @@
-import { ChainId, JSBI, Token, TokenAmount } from '@wanswap/sdk'
+import { ChainId, JSBI, Token, TokenAmount } from '@bdswap/sdk'
 import { BigNumber } from 'ethers'
 import { ZERO_ADDRESS } from '../constants'
 import { computeUniCirculation } from './computeUniCirculation'

@@ -9,7 +9,7 @@ import { TYPE, CloseIcon } from '../../theme'
 import { ButtonConfirmed, ButtonError } from '../Button'
 import ProgressCircles from '../ProgressSteps'
 import CurrencyInputPanel from '../CurrencyInputPanel'
-import { TokenAmount } from '@wanswap/sdk'
+import { TokenAmount } from '@bdswap/sdk'
 import { useActiveWeb3React } from '../../hooks'
 import { maxAmountSpend } from '../../utils/maxAmountSpend'
 import { useHiveContract } from '../../hooks/useContract'
@@ -168,7 +168,7 @@ export default function StakingModal({ isOpen, onDismiss, stakingInfo, userLiqui
 
             <TYPE.black>
               {hypotheticalRewardRate.multiply((60 * 60 * 24 * 7/5).toString()).toSignificant(4, { groupSeparator: ',' })}{' '}
-              WAN / week
+              HT / week
             </TYPE.black>
           </HypotheticalRewardRate>
 

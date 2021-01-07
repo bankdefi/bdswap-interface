@@ -14,7 +14,7 @@ import {
   Trade,
   TradeType,
   WETH
-} from '@wanswap/sdk'
+} from '@bdswap/sdk'
 import { useMemo } from 'react'
 import { useActiveWeb3React } from '../hooks'
 import { useAllTokens } from '../hooks/Tokens'
@@ -111,14 +111,14 @@ export function useV1Trade(
   const inputIsETH = inputCurrency === ETHER
   const outputIsETH = outputCurrency === ETHER
 
-  // construct a direct or through WAN v1 route
+  // construct a direct or through HT v1 route
   let pairs: Pair[] = []
   if (inputIsETH && outputPair) {
     pairs = [outputPair]
   } else if (outputIsETH && inputPair) {
     pairs = [inputPair]
   }
-  // if neither are WAN, it's token-to-token (if they both exist)
+  // if neither are HT, it's token-to-token (if they both exist)
   else if (inputPair && outputPair) {
     pairs = [inputPair, outputPair]
   }
