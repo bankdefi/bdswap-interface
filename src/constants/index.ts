@@ -12,17 +12,17 @@ type ChainTokenList = {
   readonly [chainId in ChainId]: Token[]
 }
 
-export const DAI = new Token(ChainId.MAINNET, '0x60d64ef311a4f0e288120543a14e7f90e76304c6', 18, 'DAI', 'Dai Stablecoin')
-export const USDC = new Token(ChainId.MAINNET, '0xd459dad367788893c17c09e17cfbf0bf25c62833', 6, 'USDC', 'USD//C')
-export const USDT = new Token(ChainId.MAINNET, '0x04f535663110a392a6504839beed34e019fdb4e0', 6, 'USDT', 'Tether USD')
-export const COMP = new Token(ChainId.MAINNET, '0xc00e94Cb662C3520282E6f5717214004A7f26888', 18, 'COMP', 'Compound')
-export const MKR = new Token(ChainId.MAINNET, '0x9f8F72aA9304c8B593d555F12eF6589cC3A579A2', 18, 'MKR', 'Maker')
-export const AMPL = new Token(ChainId.MAINNET, '0xD46bA6D942050d489DBd938a2C909A5d5039A161', 9, 'AMPL', 'Ampleforth')
-export const WBTC = new Token(ChainId.MAINNET, '0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599', 18, 'WBTC', 'Wrapped BTC')
-export const USDT1 = new Token(ChainId.ROPSTEN, '0x04f535663110a392a6504839beed34e019fdb4e0', 6, 'wanUSDT', 'wanUSDT')
+export const DAI = new Token(ChainId.HECO_MAINNET, '0x60d64ef311a4f0e288120543a14e7f90e76304c6', 18, 'DAI', 'Dai Stablecoin')
+export const USDC = new Token(ChainId.HECO_MAINNET, '0xd459dad367788893c17c09e17cfbf0bf25c62833', 6, 'USDC', 'USD//C')
+export const USDT = new Token(ChainId.HECO_MAINNET, '0x04f535663110a392a6504839beed34e019fdb4e0', 6, 'USDT', 'Tether USD')
+export const COMP = new Token(ChainId.HECO_MAINNET, '0xc00e94Cb662C3520282E6f5717214004A7f26888', 18, 'COMP', 'Compound')
+export const MKR = new Token(ChainId.HECO_MAINNET, '0x9f8F72aA9304c8B593d555F12eF6589cC3A579A2', 18, 'MKR', 'Maker')
+export const AMPL = new Token(ChainId.HECO_MAINNET, '0xD46bA6D942050d489DBd938a2C909A5d5039A161', 9, 'AMPL', 'Ampleforth')
+export const WBTC = new Token(ChainId.HECO_MAINNET, '0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599', 18, 'WBTC', 'Wrapped BTC')
+export const USDT1 = new Token(ChainId.HECO_TESTNET, '0x04f535663110a392a6504839beed34e019fdb4e0', 6, 'wanUSDT', 'wanUSDT')
 
-export const wanBTC = new Token(ChainId.MAINNET, '0xd15e200060fc17ef90546ad93c1c61bfefdc89c7', 8, 'wanBTC', 'wanBTC')
-export const wanETH = new Token(ChainId.MAINNET, '0xe3ae74d1518a76715ab4c7bedf1af73893cd435a', 18, 'wanETH', 'wanETH')
+export const wanBTC = new Token(ChainId.HECO_MAINNET, '0xd15e200060fc17ef90546ad93c1c61bfefdc89c7', 8, 'wanBTC', 'wanBTC')
+export const wanETH = new Token(ChainId.HECO_MAINNET, '0xe3ae74d1518a76715ab4c7bedf1af73893cd435a', 18, 'wanETH', 'wanETH')
 
 // TODO this is only approximate, it's actually based on blocks
 export const PROPOSAL_LENGTH_IN_DAYS = 7
@@ -31,14 +31,14 @@ export const GOVERNANCE_ADDRESS = '0x5e4be8Bc9637f0EAA1A755019e06A68ce081D58F'
 
 export const TIMELOCK_ADDRESS = '0x1a9C8182C09F50C8318d769245beA52c32BE35BC'
 
-const UNI_ADDRESS = '0x8B9F9f4aA70B1B0d586BE8aDFb19c1Ac38e05E9a'
-const UNI_ADDRESS_TESTNET = '0x0A3B082C1ceDa3d35E5baD2776c5a5236044A03D'
-export const WASP: { [chainId in ChainId]: Token } = {
-  [ChainId.MAINNET]: new Token(ChainId.MAINNET, UNI_ADDRESS, 18, 'WASP', 'Wanswap'),
-  [ChainId.RINKEBY]: new Token(ChainId.RINKEBY, UNI_ADDRESS_TESTNET, 18, 'WASP', 'Wanswap'),
-  [ChainId.ROPSTEN]: new Token(ChainId.ROPSTEN, UNI_ADDRESS_TESTNET, 18, 'WASP', 'Wanswap'),
-  [ChainId.GÖRLI]: new Token(ChainId.GÖRLI, UNI_ADDRESS_TESTNET, 18, 'WASP', 'Wanswap'),
-  [ChainId.KOVAN]: new Token(ChainId.KOVAN, UNI_ADDRESS_TESTNET, 18, 'WASP', 'Wanswap'),
+const UNI_ADDRESS = '0x3Bb87041edF93EaEA82F47F2B495E5859085E3eE'
+const UNI_ADDRESS_TESTNET = '0x3Bb87041edF93EaEA82F47F2B495E5859085E3eE'
+export const BDS: { [chainId in ChainId]: Token } = {
+  [ChainId.MAINNET]: new Token(ChainId.MAINNET, UNI_ADDRESS, 18, 'BDS', 'BDSwap'),
+  [ChainId.RINKEBY]: new Token(ChainId.RINKEBY, UNI_ADDRESS_TESTNET, 18, 'BDS', 'BDSwap'),
+  [ChainId.ROPSTEN]: new Token(ChainId.ROPSTEN, UNI_ADDRESS_TESTNET, 18, 'BDS', 'BDSwap'),
+  [ChainId.GÖRLI]: new Token(ChainId.GÖRLI, UNI_ADDRESS_TESTNET, 18, 'BDS', 'BDSwap'),
+  [ChainId.KOVAN]: new Token(ChainId.KOVAN, UNI_ADDRESS_TESTNET, 18, 'BDS', 'BDSwap'),
   [ChainId.HECO_MAINNET]: new Token(ChainId.HECO_MAINNET, UNI_ADDRESS, 18, 'UNI', 'Uniswap'),
   [ChainId.HECO_TESTNET]: new Token(ChainId.HECO_TESTNET, UNI_ADDRESS, 18, 'UNI', 'Uniswap')
 }

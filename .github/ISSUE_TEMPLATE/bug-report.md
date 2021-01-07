@@ -1,6 +1,6 @@
 ---
 name: Bug Report
-about: Describe an issue in the Wanswap Interface
+about: Describe an issue in the BDSwap Interface
 title: ''
 labels: bug
 assignees: ''

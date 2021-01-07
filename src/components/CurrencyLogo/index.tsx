@@ -37,7 +37,7 @@ export default function CurrencyLogo({
   const srcs: string[] = useMemo(() => {
     if (currency === ETHER) return []
 
-    if (currency?.symbol === 'WASP') {
+    if (currency?.symbol === 'BDS') {
       return [require('../../assets/svg/Logomark_WASP_token.svg')]
     }
 

@@ -147,7 +147,7 @@ export default function ManageHive({
           <AutoColumn gap="sm">
             <TYPE.body style={{ margin: 0 }}>Total deposits</TYPE.body>
             <TYPE.body fontSize={24} fontWeight={500}>
-              {`${valueOfTotalStakedAmountInWLSP?.toSignificant(6, { groupSeparator: ',' }) ?? '-'} WASP`}
+              {`${valueOfTotalStakedAmountInWLSP?.toSignificant(6, { groupSeparator: ',' }) ?? '-'} BDS`}
             </TYPE.body>
           </AutoColumn>
         </PoolData>
@@ -192,7 +192,7 @@ export default function ManageHive({
               <CardNoise />
               <AutoColumn gap="md">
                 <RowBetween>
-                  <TYPE.white fontWeight={600}>Your WASP deposits</TYPE.white>
+                  <TYPE.white fontWeight={600}>Your BDS deposits</TYPE.white>
                 </RowBetween>
                 <RowBetween style={{ alignItems: 'center', display:'flex',flexWrap:'wrap' }}>
                   <TYPE.white fontSize={36} fontWeight={600}>
@@ -260,7 +260,7 @@ export default function ManageHive({
         {!showAddLiquidityButton && (
           <DataRow style={{ marginBottom: '1rem',gap:0 }}>
             <ButtonPrimary padding="8px" borderRadius="8px" width="260px"  margin="6px" onClick={handleDepositClick}>
-              {stakingInfo?.stakedAmount?.greaterThan(JSBI.BigInt(0)) ? 'Deposit' : 'Deposit WASP Tokens'}
+              {stakingInfo?.stakedAmount?.greaterThan(JSBI.BigInt(0)) ? 'Deposit' : 'Deposit BDS Tokens'}
             </ButtonPrimary>
 
             {stakingInfo?.stakedAmount?.greaterThan(JSBI.BigInt(0)) && (

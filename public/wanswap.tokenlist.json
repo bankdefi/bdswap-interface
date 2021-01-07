@@ -7,8 +7,8 @@
     {
       "chainId": 1,
       "address": "0x8b9f9f4aa70b1b0d586be8adfb19c1ac38e05e9a",
-      "name": "WASP",
-      "symbol": "WASP",
+      "name": "BDS",
+      "symbol": "BDS",
       "decimals": 18,
       "logoURI": "https://raw.githubusercontent.com/wanswap/token-list/main/icons/wanUSDC.png"
     },

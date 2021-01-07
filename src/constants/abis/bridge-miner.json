@@ -2,8 +2,8 @@
   {
     "inputs": [
       {
-        "internalType": "contract WaspToken",
-        "name": "_wasp",
+        "internalType": "contract BDSwapToken",
+        "name": "_rewardToken",
         "type": "address"
       },
       {
@@ -13,7 +13,7 @@
       },
       {
         "internalType": "uint256",
-        "name": "_waspPerBlock",
+        "name": "_rewardPerBlock",
         "type": "uint256"
       },
       {
@@ -231,7 +231,7 @@
       },
       {
         "internalType": "uint256",
-        "name": "accWaspPerShare",
+        "name": "accRewardPerShare",
         "type": "uint256"
       }
     ],
@@ -245,6 +245,34 @@
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "rewardPerBlock",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "constant": true
+  },
+  {
+    "inputs": [],
+    "name": "rewardToken",
+    "outputs": [
+      {
+        "internalType": "contract BDSwapToken",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "constant": true
   },
   {
     "inputs": [],
@@ -324,34 +352,6 @@
       {
         "internalType": "uint256",
         "name": "rewardDebt",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function",
-    "constant": true
-  },
-  {
-    "inputs": [],
-    "name": "wasp",
-    "outputs": [
-      {
-        "internalType": "contract WaspToken",
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function",
-    "constant": true
-  },
-  {
-    "inputs": [],
-    "name": "waspPerBlock",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
         "type": "uint256"
       }
     ],
@@ -457,7 +457,7 @@
         "type": "address"
       }
     ],
-    "name": "pendingWasp",
+    "name": "pendingReward",
     "outputs": [
       {
         "internalType": "uint256",

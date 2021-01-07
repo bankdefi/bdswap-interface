@@ -85,7 +85,7 @@ export default function ClaimRewardModal({ isOpen, onDismiss, stakingInfo }: Sta
             </AutoColumn>
           )}
           <TYPE.subHeader style={{ textAlign: 'center' }}>
-            When you claim without withdrawing your WASP remains in the mining pool.
+            When you claim without withdrawing your BDS remains in the mining pool.
           </TYPE.subHeader>
           <ButtonError disabled={!!error} error={!!error && !!stakingInfo?.stakedAmount} onClick={onClaimReward}>
             {error ?? 'Claim'}

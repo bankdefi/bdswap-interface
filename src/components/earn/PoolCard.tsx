@@ -15,7 +15,7 @@ import { useTotalSupply } from '../../data/TotalSupply'
 import { usePair } from '../../data/Reserves'
 import useUSDCPrice from '../../utils/useUSDCPrice'
 import { useTranslation } from 'react-i18next'
-import { WASP } from '../../constants'
+import { BDS } from '../../constants'
 import { useActiveWeb3React } from '../../hooks'
 
 const StatContainer = styled.div`
@@ -127,9 +127,9 @@ export default function PoolCard({ stakingInfo }: { stakingInfo: StakingInfo }) 
     valueOfTotalStakedAmountInWETH && USDPrice?.quote(valueOfTotalStakedAmountInWETH)
   
   const { chainId } = useActiveWeb3React()
-  const uni = chainId ? WASP[chainId] : undefined
+  const uni = chainId ? BDS[chainId] : undefined
   const uniPrice = useUSDCPrice(uni)
-  const weekReward = stakingInfo.totalRewardRate?.multiply(`${60 * 60 * 24 * 7}`)?.toFixed(0)
+  const weekReward = stakingInfo.totalRewardRate?.multiply(`${60 * 60 * 24 * 7 / 3}`)?.toFixed(0)
   const apy = valueOfTotalStakedAmountInUSDC && weekReward && uniPrice ? (Number(weekReward) * Number(uniPrice?.toFixed(8)) / Number(valueOfTotalStakedAmountInUSDC.toFixed(0)) / 7 * 365 * 100).toFixed(0) : '--' 
 
   if (valueOfTotalStakedAmountInUSDC && stakingTokenPair) {
@@ -172,8 +172,8 @@ export default function PoolCard({ stakingInfo }: { stakingInfo: StakingInfo }) 
         <RowBetween>
           <TYPE.white> Pool rate </TYPE.white>
           <TYPE.white>{`${stakingInfo.totalRewardRate
-            ?.multiply(`${60 * 60 * 24 * 7}`)
-            ?.toFixed(0, { groupSeparator: ',' })} WASP / week`}</TYPE.white>
+            ?.multiply(`${60 * 60 * 24 * 7 / 3}`)
+            ?.toFixed(0, { groupSeparator: ',' })} BDS / week`}</TYPE.white>
         </RowBetween>
       </StatContainer>
 
@@ -190,8 +190,8 @@ export default function PoolCard({ stakingInfo }: { stakingInfo: StakingInfo }) 
               ⚡
               </span>
               {`${stakingInfo.rewardRate
-                ?.multiply(`${60 * 60 * 24 * 7}`)
-                ?.toFixed(0, { groupSeparator: ',' })} WASP / week`}
+                ?.multiply(`${60 * 60 * 24 * 7 / 3}`)
+                ?.toFixed(0, { groupSeparator: ',' })} BDS / week`}
             </TYPE.black>
           </BottomSection>
         </>

@@ -175,7 +175,7 @@ export default function Manage({
             <TYPE.body fontSize={24} fontWeight={500}>
               {valueOfTotalStakedAmountInUSDC
                 ? `$${valueOfTotalStakedAmountInUSDC.toSignificant(6, { groupSeparator: ',' })}`
-                : `${valueOfTotalStakedAmountInWLSP?.toSignificant(6, { groupSeparator: ',' }) ?? '-'} WASP`}
+                : `${valueOfTotalStakedAmountInWLSP?.toSignificant(6, { groupSeparator: ',' }) ?? '-'} BDS`}
             </TYPE.body>
           </AutoColumn>
         </PoolData>
@@ -184,9 +184,9 @@ export default function Manage({
             <TYPE.body style={{ margin: 0 }}>Pool Rate</TYPE.body>
             <TYPE.body fontSize={24} fontWeight={500}>
               {stakingInfo?.totalRewardRate
-                ?.multiply((60 * 60 * 24 * 7).toString())
+                ?.multiply((60 * 60 * 24 * 7 / 3).toString())
                 ?.toFixed(0, { groupSeparator: ',' }) ?? '-'}
-              {' WASP / week'}
+              {' BDS / week'}
             </TYPE.body>
           </AutoColumn>
         </PoolData>
@@ -199,11 +199,11 @@ export default function Manage({
           <CardSection>
             <AutoColumn gap="md">
               <RowBetween>
-                <TYPE.white fontWeight={600}>Step 1. Get WanSwap Farming token WASP</TYPE.white>
+                <TYPE.white fontWeight={600}>Step 1. Get WanSwap Farming token BDS</TYPE.white>
               </RowBetween>
               <RowBetween style={{ marginBottom: '1rem' }}>
                 <TYPE.white fontSize={14}>
-                  {`WASP tokens are required. Once you've got WASP in the farming pool you can stake your WASP tokens on this page.`}
+                  {`BDS tokens are required. Once you've got BDS in the farming pool you can stake your BDS tokens on this page.`}
                 </TYPE.white>
               </RowBetween>
               <ButtonPrimary
@@ -251,14 +251,14 @@ export default function Manage({
               <CardNoise />
               <AutoColumn gap="md">
                 <RowBetween>
-                  <TYPE.white fontWeight={600}>Your WASP deposits</TYPE.white>
+                  <TYPE.white fontWeight={600}>Your BDS deposits</TYPE.white>
                 </RowBetween>
                 <RowBetween style={{ alignItems: 'baseline' }}>
                   <TYPE.white fontSize={36} fontWeight={600}>
                     {stakingInfo?.stakedAmount?.toSignificant(6) ?? '-'}
                   </TYPE.white>
                   <TYPE.white>
-                    WASP
+                    BDS
                   </TYPE.white>
                 </RowBetween>
               </AutoColumn>
@@ -270,7 +270,7 @@ export default function Manage({
             <AutoColumn gap="sm">
               <RowBetween>
                 <div>
-                  <TYPE.black>Your unclaimed WASP</TYPE.black>
+                  <TYPE.black>Your unclaimed BDS</TYPE.black>
                 </div>
                 {stakingInfo?.earnedAmount && JSBI.notEqual(BIG_INT_ZERO, stakingInfo?.earnedAmount?.raw) && (
                   <ButtonEmpty
@@ -301,9 +301,9 @@ export default function Manage({
                   ⚡
                   </span>
                   {stakingInfo?.rewardRate
-                    ?.multiply((60 * 60 * 24 * 7).toString())
+                    ?.multiply((60 * 60 * 24 * 7 / 3).toString())
                     ?.toFixed(0, { groupSeparator: ',' }) ?? '-'}
-                  {' WASP / week'}
+                  {' BDS / week'}
                 </TYPE.black>
               </RowBetween>
             </AutoColumn>
@@ -313,13 +313,13 @@ export default function Manage({
           <span role="img" aria-label="wizard-icon" style={{ marginRight: '8px' }}>
             ⭐️
           </span>
-          When you withdraw, the contract will automagically claim WASP on your behalf!
+          When you withdraw, the contract will automagically claim BDS on your behalf!
         </TYPE.main>
 
         {!showAddLiquidityButton && (
           <DataRow style={{ marginBottom: '1rem' }}>
             <ButtonPrimary padding="8px" borderRadius="8px" width="160px" onClick={handleDepositClick}>
-              {stakingInfo?.stakedAmount?.greaterThan(JSBI.BigInt(0)) ? 'Deposit' : 'Deposit WASP Tokens'}
+              {stakingInfo?.stakedAmount?.greaterThan(JSBI.BigInt(0)) ? 'Deposit' : 'Deposit BDS Tokens'}
             </ButtonPrimary>
 
             {stakingInfo?.stakedAmount?.greaterThan(JSBI.BigInt(0)) && (
@@ -337,7 +337,7 @@ export default function Manage({
           </DataRow>
         )}
         {!userLiquidityUnstaked ? null : userLiquidityUnstaked.equalTo('0') ? null : (
-          <TYPE.main>{userLiquidityUnstaked.toSignificant(6)} WASP tokens available</TYPE.main>
+          <TYPE.main>{userLiquidityUnstaked.toSignificant(6)} BDS tokens available</TYPE.main>
         )}
       </PositionInfo>
     </PageWrapper>

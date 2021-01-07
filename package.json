@@ -1,6 +1,6 @@
 {
   "name": "@wanswap/interface",
-  "description": "Wanswap Interface",
+  "description": "BDSwap Interface",
   "homepage": ".",
   "private": true,
   "devDependencies": {

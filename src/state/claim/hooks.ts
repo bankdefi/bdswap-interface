@@ -1,4 +1,4 @@
-import { WASP } from './../../constants/index'
+import { BDS } from './../../constants/index'
 import { TokenAmount, JSBI, ChainId } from '@bdswap/sdk'
 import { TransactionResponse } from '@ethersproject/providers'
 import { useEffect, useState } from 'react'
@@ -66,7 +66,7 @@ export function useUserClaimData(account: string | null | undefined): UserClaimD
   return account && chainId ? claimInfo[key] : undefined
 }
 
-// check if user is in blob and has not yet claimed WASP
+// check if user is in blob and has not yet claimed BDS
 export function useUserHasAvailableClaim(account: string | null | undefined): boolean {
   const userClaimData = useUserClaimData(account)
   const distributorContract = useMerkleDistributorContract()
@@ -80,7 +80,7 @@ export function useUserUnclaimedAmount(account: string | null | undefined): Toke
   const userClaimData = useUserClaimData(account)
   const canClaim = useUserHasAvailableClaim(account)
 
-  const uni = chainId ? WASP[chainId] : undefined
+  const uni = chainId ? BDS[chainId] : undefined
   if (!uni) return undefined
   if (!canClaim || !userClaimData) {
     return new TokenAmount(uni, JSBI.BigInt(0))
@@ -112,7 +112,7 @@ export function useClaimCallback(
         .claim(...args, { value: null, gasLimit: calculateGasMargin(estimatedGasLimit) })
         .then((response: TransactionResponse) => {
           addTransaction(response, {
-            summary: `Claimed ${unClaimedAmount?.toSignificant(4)} WASP`,
+            summary: `Claimed ${unClaimedAmount?.toSignificant(4)} BDS`,
             claim: { recipient: account }
           })
           return response.hash

@@ -159,7 +159,7 @@ export default function StakingModal({ isOpen, onDismiss, stakingInfo, userLiqui
   //     { name: 'verifyingContract', type: 'address' }
   //   ]
   //   const domain = {
-  //     name: 'Wanswap',
+  //     name: 'BDSwap',
   //     version: '1',
   //     chainId: chainId,
   //     verifyingContract: pairContract.address
@@ -236,7 +236,7 @@ export default function StakingModal({ isOpen, onDismiss, stakingInfo, userLiqui
 
             <TYPE.black>
               {hypotheticalRewardRate.multiply((60 * 60 * 24 * 7).toString()).toSignificant(4, { groupSeparator: ',' })}{' '}
-              WASP / week
+              BDS / week
             </TYPE.black>
           </HypotheticalRewardRate>
 

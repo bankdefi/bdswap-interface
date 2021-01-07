@@ -1,7 +1,7 @@
 import { ChainId, CurrencyAmount, JSBI, Token, TokenAmount, Pair } from '@bdswap/sdk'
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
-import { WASP } from '../../constants'
+import { BDS } from '../../constants'
 import { useBlockNumber } from '../application/hooks'
 
 import { useActiveWeb3React } from '../../hooks'
@@ -75,6 +75,8 @@ export function useAllStakingRewardsInfo() {
   const token0Info = useMultipleContractSingleData(lpTokenAddr, WANV2_PAIR_INTERFACE, 'token0')
   const trackedTokenPairs = useTrackedTokenPairs()
 
+  console.log('poolInfo', poolInfo);
+
   return useMemo(() => {
     const info: {
       [chainId in ChainId]?: {
@@ -82,8 +84,8 @@ export function useAllStakingRewardsInfo() {
         stakingRewardAddress: string
       }[]
     } = {
-      [ChainId.MAINNET]: [],
-      [ChainId.ROPSTEN]: []
+      [ChainId.HECO_MAINNET]: [],
+      [ChainId.HECO_TESTNET]: []
     }
     token1Info.forEach((_v, _i) => {
       if (!_v.result || !chainId) return
@@ -108,6 +110,7 @@ export function useStakingInfo(pairToFilterBy?: Pair | null): StakingInfo[] {
   const { chainId, account } = useActiveWeb3React()
   const bridgeMinerContract = useBridgeMinerContract()
   const allStakingRewards = useAllStakingRewardsInfo()
+
   const info = useMemo(() => {
     return chainId
       ? allStakingRewards[chainId]?.filter(stakingRewardInfo =>
@@ -121,7 +124,7 @@ export function useStakingInfo(pairToFilterBy?: Pair | null): StakingInfo[] {
       : []
   }, [allStakingRewards, chainId, pairToFilterBy])
 
-  const uni = chainId ? WASP[chainId] : undefined
+  const uni = chainId ? BDS[chainId] : undefined
   const lpTokenAddr = useMemo(() => info.map(({ stakingRewardAddress }) => stakingRewardAddress), [info])
 
   const userInfoParams = useMemo(() => {
@@ -139,8 +142,8 @@ export function useStakingInfo(pairToFilterBy?: Pair | null): StakingInfo[] {
   const totalSupplies = useMultipleContractSingleData(lpTokenAddr, WANV2_PAIR_INTERFACE, 'balanceOf', [
     chainId ? BRIDGE_MINER_ADDRESS[chainId] : undefined
   ])
-  const earnedAmounts = useSingleContractMultipleData(bridgeMinerContract, 'pendingWasp', userInfoParams)
-  const rewardRates = useSingleCallResult(bridgeMinerContract, 'waspPerBlock')
+  const earnedAmounts = useSingleContractMultipleData(bridgeMinerContract, 'pendingReward', userInfoParams)
+  const rewardRates = useSingleCallResult(bridgeMinerContract, 'rewardPerBlock')
   const startBlock = useSingleCallResult(bridgeMinerContract, 'startBlock')
   const testEndBlock = useSingleCallResult(bridgeMinerContract, 'testEndBlock')
   const bonusEndBlock = useSingleCallResult(bridgeMinerContract, 'bonusEndBlock')
@@ -279,7 +282,7 @@ export function useStakingInfo(pairToFilterBy?: Pair | null): StakingInfo[] {
 
 export function useTotalUniEarned(): TokenAmount | undefined {
   const { chainId } = useActiveWeb3React()
-  const uni = chainId ? WASP[chainId] : undefined
+  const uni = chainId ? BDS[chainId] : undefined
   const stakingInfos = useStakingInfo()
 
   return useMemo(() => {

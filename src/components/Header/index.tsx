@@ -270,7 +270,9 @@ const NETWORK_LABELS: { [chainId in ChainId]?: string } = {
   [ChainId.RINKEBY]: 'Rinkeby',
   [ChainId.ROPSTEN]: 'Testnet',
   [ChainId.GÖRLI]: 'Görli',
-  [ChainId.KOVAN]: 'Kovan'
+  [ChainId.KOVAN]: 'Kovan',
+  [ChainId.HECO_MAINNET]: '',
+  [ChainId.HECO_TESTNET]: 'Testnet'
 }
 
 export default function Header() {
@@ -326,11 +328,12 @@ export default function Header() {
           >
             {t('pool')}
           </StyledNavLink>
+          <StyledNavLink id={`stake-nav-link`} to={'/farm'}>
+                {t('miningPool')}
+          </StyledNavLink>
           {
             false && (<>
-              <StyledNavLink id={`stake-nav-link`} to={'/farm'}>
-                {t('miningPool')}
-              </StyledNavLink>
+              
               <StyledNavLink id={`stake-nav-link`} to={'/hive'}>
                 {t('hive')}
               </StyledNavLink>
@@ -369,7 +372,7 @@ export default function Header() {
             <UNIWrapper onClick={toggleClaimModal}>
               <UNIAmount active={!!account && !availableClaim} style={{ pointerEvents: 'auto' }}>
                 <TYPE.white padding="0 2px">
-                  {claimTxn && !claimTxn?.receipt ? <Dots>Claiming WASP</Dots> : 'Claim WASP'}
+                  {claimTxn && !claimTxn?.receipt ? <Dots>Claiming BDS</Dots> : 'Claim BDS'}
                 </TYPE.white>
               </UNIAmount>
               <CardNoise />
@@ -420,7 +423,7 @@ export default function Header() {
                 <img style={{marginLeft:'-10px',marginRight:'5px'}} height={'52px'} src="./images/Logomark_WASP_token.svg" alt="logo" />
                 
               }
-                WASP
+                BDS
               </UNIAmount>
               <CardNoise />
             </UNIWrapper>

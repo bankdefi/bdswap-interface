@@ -50,7 +50,7 @@ export default function UnstakingModal({ isOpen, onDismiss, stakingInfo }: Staki
         .withdraw(stakingInfo.pid, `0x${stakingInfo?.stakedAmount.raw.toString(16)}`, { gasLimit: 500000 })
         .then((response: TransactionResponse) => {
           addTransaction(response, {
-            summary: `Withdraw deposited WASP`
+            summary: `Withdraw deposited BDS`
           })
           setHash(response.hash)
         })
@@ -82,7 +82,7 @@ export default function UnstakingModal({ isOpen, onDismiss, stakingInfo }: Staki
               <TYPE.body fontWeight={600} fontSize={36}>
                 {<FormattedCurrencyAmount currencyAmount={stakingInfo.stakedAmount} />}
               </TYPE.body>
-              <TYPE.body>Deposited WASP:</TYPE.body>
+              <TYPE.body>Deposited BDS:</TYPE.body>
             </AutoColumn>
           )}
           {stakingInfo?.earnedAmount && (
@@ -94,7 +94,7 @@ export default function UnstakingModal({ isOpen, onDismiss, stakingInfo }: Staki
             </AutoColumn>
           )}
           <TYPE.subHeader style={{ textAlign: 'center' }}>
-            When you withdraw, your HT is claimed and your WASP is removed from the mining pool.
+            When you withdraw, your HT is claimed and your BDS is removed from the mining pool.
           </TYPE.subHeader>
           <ButtonError disabled={!!error} error={!!error && !!stakingInfo?.stakedAmount} onClick={onWithdraw}>
             {error ?? 'Withdraw & Claim'}
@@ -104,7 +104,7 @@ export default function UnstakingModal({ isOpen, onDismiss, stakingInfo }: Staki
       {attempting && !hash && (
         <LoadingView onDismiss={wrappedOndismiss}>
           <AutoColumn gap="12px" justify={'center'}>
-            <TYPE.body fontSize={20}>Withdrawing {stakingInfo?.stakedAmount?.toSignificant(4)} WASP</TYPE.body>
+            <TYPE.body fontSize={20}>Withdrawing {stakingInfo?.stakedAmount?.toSignificant(4)} BDS</TYPE.body>
             <TYPE.body fontSize={20}>Claiming {stakingInfo?.earnedAmount?.toSignificant(4)} HT</TYPE.body>
           </AutoColumn>
         </LoadingView>
@@ -113,7 +113,7 @@ export default function UnstakingModal({ isOpen, onDismiss, stakingInfo }: Staki
         <SubmittedView onDismiss={wrappedOndismiss} hash={hash}>
           <AutoColumn gap="12px" justify={'center'}>
             <TYPE.largeHeader>Transaction Submitted</TYPE.largeHeader>
-            <TYPE.body fontSize={20}>Withdrew WASP!</TYPE.body>
+            <TYPE.body fontSize={20}>Withdrew BDS!</TYPE.body>
             <TYPE.body fontSize={20}>Claimed HT!</TYPE.body>
           </AutoColumn>
         </SubmittedView>

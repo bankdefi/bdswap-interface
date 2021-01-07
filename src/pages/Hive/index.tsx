@@ -51,11 +51,11 @@ export default function Earn() {
           <CardSection>
             <AutoColumn gap="md">
               <RowBetween>
-                <TYPE.white fontWeight={600}>Hive your WASP</TYPE.white>
+                <TYPE.white fontWeight={600}>Hive your BDS</TYPE.white>
               </RowBetween>
               <RowBetween>
                 <TYPE.white fontSize={14}>
-                  Hive your WASP to get honey tokens.
+                  Hive your BDS to get honey tokens.
                 </TYPE.white>
               </RowBetween>{' '}
               <ExternalLink
@@ -63,7 +63,7 @@ export default function Earn() {
                 href="https://medium.com/wanswap/introducing-wanswap-the-wanchain-based-cross-chain-decentralized-exchange-with-automated-market-5e5f5956c223"
                 target="_blank"
               >
-                <TYPE.white fontSize={14}>Read more about WASP Hive</TYPE.white>
+                <TYPE.white fontSize={14}>Read more about BDS Hive</TYPE.white>
               </ExternalLink>
             </AutoColumn>
           </CardSection>

@@ -92,7 +92,7 @@ export default function StakingModal({ isOpen, onDismiss, stakingInfo, userLiqui
           .deposit(stakingInfo.pid, `0x${parsedAmount.raw.toString(16)}`, { gasLimit: 500000 })
           .then((response: TransactionResponse) => {
             addTransaction(response, {
-              summary: `Deposit WASP`
+              summary: `Deposit BDS`
             })
             setHash(response.hash)
           })
@@ -112,7 +112,7 @@ export default function StakingModal({ isOpen, onDismiss, stakingInfo, userLiqui
           )
           .then((response: TransactionResponse) => {
             addTransaction(response, {
-              summary: `Deposit WASP`
+              summary: `Deposit BDS`
             })
             setHash(response.hash)
           })
@@ -197,8 +197,8 @@ export default function StakingModal({ isOpen, onDismiss, stakingInfo, userLiqui
       {attempting && !hash && (
         <LoadingView onDismiss={wrappedOnDismiss}>
           <AutoColumn gap="12px" justify={'center'}>
-            <TYPE.largeHeader>Depositing WASP</TYPE.largeHeader>
-            <TYPE.body fontSize={20}>{parsedAmount?.toSignificant(4)} WASP</TYPE.body>
+            <TYPE.largeHeader>Depositing BDS</TYPE.largeHeader>
+            <TYPE.body fontSize={20}>{parsedAmount?.toSignificant(4)} BDS</TYPE.body>
           </AutoColumn>
         </LoadingView>
       )}
@@ -206,7 +206,7 @@ export default function StakingModal({ isOpen, onDismiss, stakingInfo, userLiqui
         <SubmittedView onDismiss={wrappedOnDismiss} hash={hash}>
           <AutoColumn gap="12px" justify={'center'}>
             <TYPE.largeHeader>Transaction Submitted</TYPE.largeHeader>
-            <TYPE.body fontSize={20}>Deposited {parsedAmount?.toSignificant(4)} WASP</TYPE.body>
+            <TYPE.body fontSize={20}>Deposited {parsedAmount?.toSignificant(4)} BDS</TYPE.body>
           </AutoColumn>
         </SubmittedView>
       )}

@@ -1,7 +1,7 @@
 import { ChainId, CurrencyAmount, JSBI, Token, TokenAmount, WETH } from '@bdswap/sdk'
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
-import { WASP } from '../../constants'
+import { BDS } from '../../constants'
 import { useBlockNumber } from '../application/hooks'
 
 import { useActiveWeb3React } from '../../hooks'
@@ -82,7 +82,7 @@ export function useAllStakingRewardsInfo() {
     }
     lpTokenAddr.forEach((_v, _i) => {
       if (!_v || !chainId) return
-      const ret = new Token(chainId, BRIDGE_TOKEN_ADDRESS[chainId], 18, 'WASP', 'WASP');
+      const ret = new Token(chainId, BRIDGE_TOKEN_ADDRESS[chainId], 18, 'BDS', 'BDS');
       if (ret) {
         info[chainId]?.push({
           tokens: [ret, ret],
@@ -113,7 +113,7 @@ export function useStakingInfo(token?: Token | null, pid?: string | number | nul
       : []
   }, [allStakingRewards, chainId, token])
 
-  const uni = chainId ? WASP[chainId] : undefined
+  const uni = chainId ? BDS[chainId] : undefined
   const lpTokenAddr = useMemo(() => info.map(({ stakingRewardAddress }) => stakingRewardAddress), [info])
 
   const userInfoParams = useMemo(() => {
@@ -196,7 +196,7 @@ export function useStakingInfo(token?: Token | null, pid?: string | number | nul
 
 export function useTotalUniEarned(): TokenAmount | undefined {
   const { chainId } = useActiveWeb3React()
-  const uni = chainId ? WASP[chainId] : undefined
+  const uni = chainId ? BDS[chainId] : undefined
   const stakingInfos = useStakingInfo()
 
   return useMemo(() => {

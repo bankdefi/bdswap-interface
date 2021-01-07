@@ -184,9 +184,9 @@ export default function Manage({
             <TYPE.body style={{ margin: 0 }}>Pool Rate</TYPE.body>
             <TYPE.body fontSize={24} fontWeight={500}>
               {stakingInfo?.totalRewardRate
-                ?.multiply((60 * 60 * 24 * 7).toString())
+                ?.multiply((60 * 60 * 24 * 7 / 3).toString())
                 ?.toFixed(0, { groupSeparator: ',' }) ?? '-'}
-              {' WASP / week'}
+              {' BDS / week'}
             </TYPE.body>
           </AutoColumn>
         </PoolData>
@@ -270,7 +270,7 @@ export default function Manage({
             <AutoColumn gap="sm">
               <RowBetween>
                 <div>
-                  <TYPE.black>Your unclaimed WASP</TYPE.black>
+                  <TYPE.black>Your unclaimed BDS</TYPE.black>
                 </div>
                 {stakingInfo?.earnedAmount && JSBI.notEqual(BIG_INT_ZERO, stakingInfo?.earnedAmount?.raw) && (
                   <ButtonEmpty
@@ -301,9 +301,9 @@ export default function Manage({
                   ⚡
                   </span>
                   {stakingInfo?.rewardRate
-                    ?.multiply((60 * 60 * 24 * 7).toString())
+                    ?.multiply((60 * 60 * 24 * 7 / 3).toString())
                     ?.toFixed(0, { groupSeparator: ',' }) ?? '-'}
-                  {' WASP / week'}
+                  {' BDS / week'}
                 </TYPE.black>
               </RowBetween>
             </AutoColumn>
@@ -313,7 +313,7 @@ export default function Manage({
           <span role="img" aria-label="wizard-icon" style={{ marginRight: '8px' }}>
             ⭐️
           </span>
-          When you withdraw, the contract will automagically claim WASP on your behalf!
+          When you withdraw, the contract will automagically claim BDS on your behalf!
         </TYPE.main>
 
         {!showAddLiquidityButton && (
