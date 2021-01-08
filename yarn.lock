@@ -1322,10 +1322,10 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
-"@bdswap/sdk@^3.0.13":
-  version "3.0.13"
-  resolved "https://registry.yarnpkg.com/@bdswap/sdk/-/sdk-3.0.13.tgz#185aa17f8a6e9d15b17b124e6d93dbd54d4f982f"
-  integrity sha512-IKJIHedmwNeye3idJcRswoi0UsFMOR2uVgPTsaqhkmCZqA9PMc0bygJT9Fsq33rR7tPZAaruZs7Jwg/HRSarmA==
+"@bdswap/sdk@^3.0.14":
+  version "3.0.14"
+  resolved "https://registry.yarnpkg.com/@bdswap/sdk/-/sdk-3.0.14.tgz#8d2da7984571b72ff2b99cf8f6569ee757867d02"
+  integrity sha512-1FpRxv1/SpvPMizmgcylIgRB50ugR2HRj+wHrVkAE1zbycxUdRclStWqUcz7RIEpsd7YoMX6EVsnwRlCgN6jJA==
   dependencies:
     "@uniswap/v2-core" "^1.0.0"
     "@wansproject/address" "^5.0.5"

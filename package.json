@@ -119,7 +119,7 @@
   },
   "license": "GPL-3.0-or-later",
   "dependencies": {
-    "@bdswap/sdk": "^3.0.13",
+    "@bdswap/sdk": "^3.0.14",
     "@wansproject/address": "5.1.1",
     "@wanswap/sdk": "3.0.13",
     "@web3-react-wan/abstract-connector": "^6.1.7",
