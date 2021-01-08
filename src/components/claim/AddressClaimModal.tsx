@@ -161,7 +161,7 @@ export default function AddressClaimModal({ isOpen, onDismiss }: { isOpen: boole
                 {claimConfirmed ? 'Claimed' : 'Claiming'}
               </TYPE.largeHeader>
               {!claimConfirmed && (
-                <Text fontSize={36} color={'#ff007a'} fontWeight={800}>
+                <Text fontSize={36} color={'#0071bc'} fontWeight={800}>
                   {unclaimedAmount?.toFixed(0, { groupSeparator: ',' } ?? '-')} BDS
                 </Text>
               )}
