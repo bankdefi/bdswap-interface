@@ -75,8 +75,6 @@ export function useAllStakingRewardsInfo() {
   const token0Info = useMultipleContractSingleData(lpTokenAddr, WANV2_PAIR_INTERFACE, 'token0')
   const trackedTokenPairs = useTrackedTokenPairs()
 
-  console.log('poolInfo', poolInfo);
-
   return useMemo(() => {
     const info: {
       [chainId in ChainId]?: {

@@ -178,7 +178,7 @@ export function useURLWarningToggle(): () => void {
  * @param tokenB the other token
  */
 export function toV2LiquidityToken([tokenA, tokenB]: [Token, Token]): Token {
-  return new Token(tokenA.chainId, Pair.getAddress(tokenA, tokenB), 18, 'WSLP', 'WanSwap Liquidity Pool Token')
+  return new Token(tokenA.chainId, Pair.getAddress(tokenA, tokenB), 18, 'BDSLP', 'BankDefi Liquidity Pool Token')
 }
 
 /**
@@ -187,10 +187,8 @@ export function toV2LiquidityToken([tokenA, tokenB]: [Token, Token]): Token {
 export function useTrackedTokenPairs(): [Token, Token][] {
   const { chainId } = useActiveWeb3React()
   const tokens = useAllTokens()
-
   // pinned pairs
   const pinnedPairs = useMemo(() => (chainId ? PINNED_PAIRS[chainId] ?? [] : []), [chainId])
-
   // pairs for every token against every base
   const generatedPairs: [Token, Token][] = useMemo(
     () =>
@@ -258,9 +256,7 @@ export function useTokenPairsWithLiquidityTokens(trackedTokenPairs: [Token, Toke
   for (let i=0; i<trackedTokenPairs.length; i++) {
     params.push([trackedTokenPairs[i][0].address, trackedTokenPairs[i][1].address])
   }
-
   const pairsFromFactory = useSingleContractMultipleData(factory, 'getPair', params);
-  // console.debug('pairsFromFactory', pairsFromFactory);
   const pairs = useMemo(() => {
     const tmpPairs : { liquidityToken: Token; tokens: [Token, Token] }[] = []
     for (let i=0; i<pairsFromFactory.length; i++) {
@@ -268,7 +264,7 @@ export function useTokenPairsWithLiquidityTokens(trackedTokenPairs: [Token, Toke
         continue
       }
       tmpPairs.push({
-        liquidityToken: new Token(trackedTokenPairs[i][0].chainId, pairsFromFactory[i].result!.pair, 18, 'WSLP', 'WanSwap Liquidity Pool Token'),
+        liquidityToken: new Token(trackedTokenPairs[i][0].chainId, pairsFromFactory[i].result!.pair, 18, 'BDSLP', 'BankDefi Liquidity Pool Token'),
         tokens: trackedTokenPairs[i]
       })
       Pair.setAddress(trackedTokenPairs[i][0], trackedTokenPairs[i][1], pairsFromFactory[i].result!.pair)

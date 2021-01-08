@@ -108,10 +108,8 @@ export default function Pool() {
   // console.debug('liquidityTokensWithBalances', liquidityTokensWithBalances);
 
   const v2Pairs = usePairs(liquidityTokensWithBalances.map(({ tokens }) => tokens))
-  console.debug('v2Pairs', v2Pairs);
   const v2IsLoading =
     fetchingV2PairBalances || v2Pairs?.length < liquidityTokensWithBalances.length || v2Pairs?.some(V2Pair => !V2Pair)
-  console.debug('v2IsLoading', v2IsLoading)
   const allV2PairsWithLiquidity = v2Pairs.map(([, pair]) => pair).filter((v2Pair): v2Pair is Pair => Boolean(v2Pair))
 
   // TODO: Remove
