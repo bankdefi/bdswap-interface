@@ -104,27 +104,27 @@ export default function Menu() {
 
       {open && (
         <MenuFlyout>
-          <MenuItem id="link" href="https://twitter.com/wanswap">
+          <MenuItem id="link" href="https://twitter.com/bankdefi">
             <Info size={14} />
             Twitter
           </MenuItem>
-          <MenuItem id="link" href="https://medium.com/wanswap">
+          <MenuItem id="link" href="https://medium.com/bankdefi">
             <BookOpen size={14} />
             Blog
           </MenuItem>
-          <MenuItem id="link" href="https://docs.wanswap.finance/">
+          <MenuItem id="link" href="https://docs.bankdefi.finance/">
             <BookOpen size={14} />
             Docs
           </MenuItem>
-          <MenuItem id="link" href="https://github.com/wanswap/wanswap-interface/discussions">
+          <MenuItem id="link" href="https://github.com/bankdefi/bdswap-interface/discussions">
             <MessageCircle size={14} />
             Discussions
           </MenuItem>
-          <MenuItem id="link" href="https://github.com/wanswap">
+          <MenuItem id="link" href="https://github.com/bankdefi">
             <Code size={14} />
             Code
           </MenuItem>
-          { <MenuItem id="link" href="https://t.me/wanswap_official">
+          { <MenuItem id="link" href="https://t.me/bankdefi_official">
             <MessageCircle size={14} />
             Telegram
           </MenuItem>

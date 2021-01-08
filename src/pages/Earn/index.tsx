@@ -39,7 +39,6 @@ export default function Earn() {
   const { chainId } = useActiveWeb3React()
   const stakingInfos = useStakingInfo()
   const stakingRewardsInfo = useAllStakingRewardsInfo()
-  console.log('stakingRewardsInfo', stakingRewardsInfo);
   const DataRow = styled(RowBetween)`
     ${({ theme }) => theme.mediaWidth.upToSmall`
     flex-direction: column;
