@@ -79,9 +79,11 @@ const Web3StatusConnected = styled(Web3StatusGeneric)<{ pending?: boolean }>`
   color: ${({ pending, theme }) => (pending ? theme.white : theme.white)};
   font-weight: 500;
   :hover,
+  :active,
   :focus {
     background-color: ${({ pending, theme }) => (pending ? darken(0.05, theme.primary1) : lighten(0.05, '#2C2F36'))};
     border:0;
+    box-shadow:none;
   }
   margin-top:1px;
   margin-bottom:1px;
