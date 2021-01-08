@@ -224,9 +224,13 @@ div[data-reach-dialog-content] a
 {
   color:#0071bc ;
 }
+#swap-currency-input
+{
+  margin-bottom:-25px;
+}
 #swap-currency-output-2
 {
-  margin-top:-10px;
+  margin-top:-25px;
 }
 #logo-background
 {
