@@ -75,21 +75,21 @@ export const ButtonLight = styled(Base)`
   font-size: 20px;
   font-weight: 500;
   &:focus {
-    box-shadow: 0 0 0 1pt ${({ theme, disabled }) => !disabled && darken(0.2, '#FFE600')};
-    background-color: ${({ theme, disabled }) => !disabled && darken(0.2, '#FFE600')};
+    box-shadow: 0 0 0 1pt ${({ theme, disabled }) => !disabled && darken(0.2, '#0071bc')};
+    background-color: ${({ theme, disabled }) => !disabled && darken(0.2, '#0071bc')};
   }
   &:hover {
-    background-color: ${({ theme, disabled }) => !disabled && darken(0.2, '#FFE600')};
+    background-color: ${({ theme, disabled }) => !disabled && darken(0.2, '#0071bc')};
   }
   &:active {
-    box-shadow: 0 0 0 1pt ${({ theme, disabled }) => !disabled && darken(0.05, '#FFE600')};
-    background-color: ${({ theme, disabled }) => !disabled && darken(0.2, '#FFE600')};
+    box-shadow: 0 0 0 1pt ${({ theme, disabled }) => !disabled && darken(0.05, '#0071bc')};
+    background-color: ${({ theme, disabled }) => !disabled && darken(0.2, '#0071bc')};
   }
   :disabled {
     opacity: 0.4;
     :hover {
       cursor: auto;
-      background-color: '#FFE600';
+      background-color: #0071bc;
       box-shadow: none;
       border: 1px solid transparent;
       outline: none;

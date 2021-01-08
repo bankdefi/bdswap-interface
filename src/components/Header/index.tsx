@@ -121,14 +121,14 @@ const AccountElement = styled.div<{ active: boolean }>`
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-color: ${({ theme, active }) => (!active ? theme.bg1 : theme.bg3)};
+  background-color: #0071bc;
   border-radius:10px;
   white-space: nowrap;
   width: 100%;
   cursor: pointer;
 
   :focus {
-    border: 1px solid blue;
+    border: 1px solid #0071bc;
   }
   /* :hover {
     background-color: ${({ theme, active }) => (!active ? theme.bg2 : theme.bg4)};
@@ -136,12 +136,11 @@ const AccountElement = styled.div<{ active: boolean }>`
 `
 
 const UNIAmount = styled(AccountElement)`
-  color: #313131;
+  color: white;
   padding: 4px 8px;
   height: 36px;
   font-weight: 500;
-  background-color: ${({ theme }) => theme.bg3};
-  background: #FFE600;
+  background: linear-gradient(90deg,rgb(0,169,157) 0%,rgb(40,171,224) 100%);
 `
 
 const UNIWrapper = styled.span`
@@ -180,6 +179,7 @@ border-radius:10px;
 `
 
 const BalanceText = styled(Text)`
+color:white;
   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
     display: none;
   `};
@@ -385,7 +385,7 @@ export default function Header() {
                     <TYPE.white
                       style={{
                         paddingRight: '.4rem',
-                        color:'#313131'
+                        color:'white'
                       }}
                     >
                       <CountUp
@@ -404,7 +404,7 @@ export default function Header() {
                     <TYPE.white
                       style={{
                         paddingRight: '.4rem',
-                        color:'#313131'
+                        color:'white'
                       }}
                     >
                       <CountUp
@@ -418,8 +418,7 @@ export default function Header() {
                     </TYPE.white>
                   </HideSmall>
                 )
-                :
-                <img style={{marginLeft:'-10px',marginRight:'5px'}} height={'52px'} src="./images/Logomark_WASP_token.svg" alt="logo" />
+                :<span></span>
                 
               }
                 BDS

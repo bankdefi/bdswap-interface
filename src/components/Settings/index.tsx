@@ -25,7 +25,7 @@ const StyledMenuIcon = styled(Settings)`
   width: 20px;
 
   > * {
-    stroke: ${({ theme }) => theme.text1};
+    stroke: white;
   }
 `
 
@@ -50,7 +50,8 @@ const StyledMenuButton = styled.button`
   margin: 0;
   padding: 0;
   height: 35px;
-  background-color: ${({ theme }) => theme.bg3};
+  background-color:#0071bc;
+  color:white !important;
 
   padding: 0.15rem 0.5rem;
   border-radius:10px;
@@ -59,7 +60,8 @@ const StyledMenuButton = styled.button`
   :focus {
     cursor: pointer;
     outline: none;
-    background-color: ${({ theme }) => theme.bg4};
+    background-color: #0071bc;
+    opacity:0.9;
   }
 
   svg {

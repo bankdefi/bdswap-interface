@@ -188,8 +188,8 @@ const WalletAction = styled(ButtonSecondary)`
   margin-left: 8px;
   font-size: 0.825rem;
   padding: 4px 6px;
-  color:#FFE600;
-  border-color:#FFE600 !important;
+  color:#0071bc;
+  border-color:#0071bc !important;
   :hover {
     cursor: pointer;
     text-decoration: underline;
@@ -362,7 +362,7 @@ export default function AccountDetails({
         <LowerSection>
           <AutoRow mb={'1rem'} style={{ justifyContent: 'space-between' }}>
             <TYPE.body>{t('recentTransactions')}</TYPE.body>
-            <LinkStyledButton style={{color:'#FFE600'}} onClick={clearAllTransactionsCallback}>{t('clearAll')}</LinkStyledButton>
+            <LinkStyledButton style={{color:'#0071bc'}} onClick={clearAllTransactionsCallback}>{t('clearAll')}</LinkStyledButton>
           </AutoRow>
           {renderTransactions(pendingTransactions)}
           {renderTransactions(confirmedTransactions)}
