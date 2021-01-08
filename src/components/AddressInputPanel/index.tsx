@@ -11,8 +11,8 @@ import { useTranslation } from 'react-i18next'
 const InputPanel = styled.div`
   ${({ theme }) => theme.flexColumnNoWrap}
   position: relative;
-  border-radius:10px;
-  background-color: ${({ theme }) => theme.bg1};
+  border-radius:20px;
+  background-color:rgb(242, 242, 242);
   z-index: 1;
   width: 100%;
 `
@@ -21,11 +21,11 @@ const ContainerRow = styled.div<{ error: boolean }>`
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius:10px;
-  border: 1px solid ${({ error, theme }) => (error ? theme.red1 : 'rgb(26, 61, 119)')};
+  border-radius:20px;
+  border: 1px solid ${({ error, theme }) => (error ? theme.red1 : 'rgb(242, 242, 242)')};
   transition: border-color 300ms ${({ error }) => (error ? 'step-end' : 'step-start')},
     color 500ms ${({ error }) => (error ? 'step-end' : 'step-start')};
-  background-color: ${({ theme }) => theme.bg1};
+  background-color: rgb(242, 242, 242);
 `
 
 const InputContainer = styled.div`
@@ -97,7 +97,7 @@ export default function AddressInputPanel({
   return (
     <InputPanel id={id}>
       <ContainerRow error={error}>
-        <InputContainer  style={{background:'rgb(26, 61, 119)',borderRadius:'10px'}} >
+        <InputContainer style={{borderRadius:20}} >
           <AutoColumn gap="md">
             <RowBetween >
               <TYPE.black color={theme.text2} fontWeight={500} fontSize={14}>
@@ -109,7 +109,7 @@ export default function AddressInputPanel({
                 </ExternalLink>
               )}
             </RowBetween>
-            <Input  style={{background:'rgb(26, 61, 119)',color:'white'}} 
+            <Input  style={{background:'rgb(242, 242, 242)',color:'rgb(36, 114, 224)'}} 
             
               className="recipient-address-input"
               type="text"

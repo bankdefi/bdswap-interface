@@ -6,7 +6,7 @@ export const BodyWrapper = styled.div`
   max-width: 500px;
   width: 100%;
   background: #FFFFFF;
-  box-shadow: 10px 10px 10px #0000002e, -10px -10px 10px #ffffffbf;
+  box-shadow: 10px 8px 15px 5px #0000002e, -8px -10px 15px 5px #ffffff90;
   border-radius: 20px;
   padding: 15px;
 

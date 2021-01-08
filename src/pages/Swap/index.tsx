@@ -338,8 +338,8 @@ export default function Swap() {
             {recipient !== null && !showWrap ? (
               <>
                 <AutoRow justify="space-between" style={{ padding: '0 1rem' }}>
-                  <ArrowWrapper clickable={false}>
-                    <ArrowDown size="16" color="#FFF" />
+                  <ArrowWrapper clickable={false} style={{background:'transparent'}}>
+                    <ArrowDown size="16" color="rgb(195, 197, 203)"/>
                   </ArrowWrapper>
                   <LinkStyledButton style={{color:'#C3C5CB',justifyContent:'space-between'}}  id="remove-recipient-button" onClick={() => onChangeRecipient(null)}>
                     {t('removeRecipent')}

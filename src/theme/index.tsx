@@ -268,14 +268,14 @@ div[data-reach-dialog-content] a
 }
 
 
-.token-amount-input::placeholder
+.token-amount-input::placeholder , .recipient-address-input::placeholder
 {
   color:rgba(36,114,224,0.7) !important;
 }
 #pseudo-loader
 {
   position: absolute;
-  filter: drop-shadow(10px 10px 10px #0000002e) drop-shadow(-10px -10px 10px #ffffffbf);
+  filter: drop-shadow(10px 10px 10px #0000002e) drop-shadow(-10px -10px 10px #ffffff90);
   animation: none;
 }
 #deco_bg_buttom
@@ -359,14 +359,23 @@ div[data-reach-dialog-overlay] {
 
 }
 div[data-reach-dialog-content]{
-  box-shadow: 10px 10px 10px #0000002e, -10px -10px 10px #ffffffbf !important;
+  box-shadow: 10px 8px 15px 5px #0000002e, -8px -10px 15px 5px #ffffff90;
   border-radius:20px !important;
 }
 .bfqITV
 {
   border-radius:0 !important;
 }
+.open-currency-select-button svg path
+{
+  stroke: #1d66cd;
+}
 
+.open-currency-select-button.ntGJh svg path
+{
+  stroke: white;
+  stroke-width:2px;
+}
 `
 
 export const ThemedGlobalStyle = createGlobalStyle`
