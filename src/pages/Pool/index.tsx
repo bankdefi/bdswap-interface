@@ -27,7 +27,7 @@ const PageWrapper = styled(AutoColumn)`
 `
 
 const VoteCard = styled(DataCard)`
-  background: radial-gradient(100% 90% at 20% 0%,#41beec 0%,#123471 100%)
+  background: linear-gradient(90deg,rgb(0,169,157) 0%,rgb(40,171,224) 100%);
   overflow: hidden;
 `
 
@@ -58,9 +58,17 @@ const ResponsiveButtonPrimary = styled(ButtonPrimary)`
 
 const ResponsiveButtonSecondary = styled(ButtonSecondary)`
   width: fit-content;
+  border:1px solid rgba(0,169,157,1);
+  border-radius:20px;
+  color:rgba(0,169,157,1);
   ${({ theme }) => theme.mediaWidth.upToSmall`
     width: 48%;
   `};
+  :hover
+  {
+    border:1px solid rgba(0,169,157,1);
+    opacity:0.8;
+  }
 `
 
 const EmptyProposals = styled.div`

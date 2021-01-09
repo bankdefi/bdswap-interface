@@ -87,7 +87,7 @@ export function MinimalPositionCard({ pair, showUnwrapped = false, border }: Pos
   return (
     <>
       {userPoolBalance && JSBI.greaterThan(userPoolBalance.raw, JSBI.BigInt(0)) ? (
-        <GreyCard style={{background:'rgb(26,61,119)'}} border={border}>
+        <GreyCard style={{background:'white',boxShadow:'2px 2px 8px #0000002e'}} border={border}>
           <AutoColumn gap="12px">
             <FixedHeightRow>
               <RowFixed>
@@ -150,7 +150,7 @@ export function MinimalPositionCard({ pair, showUnwrapped = false, border }: Pos
           </AutoColumn>
         </GreyCard>
       ) : (
-        <LightCard>
+        <LightCard style={{boxShadow:'2px 2px 8px #0000002e',background:'white'}}>
           <TYPE.subHeader style={{ textAlign: 'center' }}>
             <span role="img" aria-label="wizard-icon">
               ⭐️
@@ -196,7 +196,7 @@ export default function FullPositionCard({ pair, border }: PositionCardProps) {
   const backgroundColor = useColor(pair?.token0)
 
   return (
-    <StyledPositionCard border={border} bgColor={backgroundColor} style={{background:'#123471'}}>
+    <StyledPositionCard border={border} bgColor={backgroundColor} style={{background:'white',boxShadow:'10px 8px 15px 5px #0000002e, -8px -10px 15px 5px #ffffff90'}}>
       <CardNoise />
       <AutoColumn gap="12px">
         <FixedHeightRow>
