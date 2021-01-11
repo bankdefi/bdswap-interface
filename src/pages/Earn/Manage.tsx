@@ -184,7 +184,7 @@ export default function Manage({
             <TYPE.body style={{ margin: 0 }}>Pool Rate</TYPE.body>
             <TYPE.body fontSize={24} fontWeight={500}>
               {stakingInfo?.totalRewardRate
-                ?.multiply((60 * 60 * 24 * 7 / 3).toString())
+                ?.multiply((60 * 60 * 24 * 7).toString())
                 ?.toFixed(0, { groupSeparator: ',' }) ?? '-'}
               {' BDS / week'}
             </TYPE.body>
@@ -301,7 +301,7 @@ export default function Manage({
                   ⚡
                   </span>
                   {stakingInfo?.rewardRate
-                    ?.multiply((60 * 60 * 24 * 7 / 3).toString())
+                    ?.multiply((60 * 60 * 24 * 7).toString())
                     ?.toFixed(0, { groupSeparator: ',' }) ?? '-'}
                   {' BDS / week'}
                 </TYPE.black>

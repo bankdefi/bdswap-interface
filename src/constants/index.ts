@@ -105,6 +105,16 @@ export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } 
     ],
     [USDC, USDT],
     [DAI, USDT]
+  ],
+  [ChainId.HECO_MAINNET]: [
+    [USDC, USDT],
+    [DAI, USDT]
+  ],
+  [ChainId.HECO_TESTNET]: [
+    [
+      new Token(ChainId.HECO_TESTNET, '0xd459dad367788893c17c09e17cfbf0bf25c62833', 6, 'USDC', 'USDC'),
+      new Token(ChainId.HECO_TESTNET, '0x04f535663110a392a6504839beed34e019fdb4e0', 6, 'USDT', 'USDT')
+    ],
   ]
 }
 

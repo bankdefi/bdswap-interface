@@ -74,7 +74,6 @@ export function useAllStakingRewardsInfo() {
   const token1Info = useMultipleContractSingleData(lpTokenAddr, WANV2_PAIR_INTERFACE, 'token1')
   const token0Info = useMultipleContractSingleData(lpTokenAddr, WANV2_PAIR_INTERFACE, 'token0')
   const trackedTokenPairs = useTrackedTokenPairs()
-
   return useMemo(() => {
     const info: {
       [chainId in ChainId]?: {
@@ -108,7 +107,6 @@ export function useStakingInfo(pairToFilterBy?: Pair | null): StakingInfo[] {
   const { chainId, account } = useActiveWeb3React()
   const bridgeMinerContract = useBridgeMinerContract()
   const allStakingRewards = useAllStakingRewardsInfo()
-
   const info = useMemo(() => {
     return chainId
       ? allStakingRewards[chainId]?.filter(stakingRewardInfo =>
@@ -212,7 +210,7 @@ export function useStakingInfo(pairToFilterBy?: Pair | null): StakingInfo[] {
           JSBI.BigInt(
             rewardRateState.result?.[0]
               .mul(radix)
-              .div(5)
+              .div(3)
               .mul(poolInfo[poolInfo.findIndex(val => val.result?.lpToken === rewardsAddress)].result?.allocPoint)
               ?.div(totalAllocPoint.result?.[0])
           )

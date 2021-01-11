@@ -129,7 +129,7 @@ export default function PoolCard({ stakingInfo }: { stakingInfo: StakingInfo }) 
   const { chainId } = useActiveWeb3React()
   const uni = chainId ? BDS[chainId] : undefined
   const uniPrice = useUSDCPrice(uni)
-  const weekReward = stakingInfo.totalRewardRate?.multiply(`${60 * 60 * 24 * 7 / 3}`)?.toFixed(0)
+  const weekReward = stakingInfo.totalRewardRate?.multiply(`${60 * 60 * 24 * 7}`)?.toFixed(0)
   const apy = valueOfTotalStakedAmountInUSDC && weekReward && uniPrice ? (Number(weekReward) * Number(uniPrice?.toFixed(8)) / Number(valueOfTotalStakedAmountInUSDC.toFixed(0)) / 7 * 365 * 100).toFixed(0) : '--' 
 
   if (valueOfTotalStakedAmountInUSDC && stakingTokenPair) {
@@ -172,7 +172,7 @@ export default function PoolCard({ stakingInfo }: { stakingInfo: StakingInfo }) 
         <RowBetween>
           <TYPE.white> Pool rate </TYPE.white>
           <TYPE.white>{`${stakingInfo.totalRewardRate
-            ?.multiply(`${60 * 60 * 24 * 7 / 3}`)
+            ?.multiply(`${60 * 60 * 24 * 7}`)
             ?.toFixed(0, { groupSeparator: ',' })} BDS / week`}</TYPE.white>
         </RowBetween>
       </StatContainer>
@@ -190,7 +190,7 @@ export default function PoolCard({ stakingInfo }: { stakingInfo: StakingInfo }) 
               ⚡
               </span>
               {`${stakingInfo.rewardRate
-                ?.multiply(`${60 * 60 * 24 * 7 / 3}`)
+                ?.multiply(`${60 * 60 * 24 * 7}`)
                 ?.toFixed(0, { groupSeparator: ',' })} BDS / week`}
             </TYPE.black>
           </BottomSection>
