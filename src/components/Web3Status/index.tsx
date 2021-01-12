@@ -91,8 +91,7 @@ const Web3StatusConnected = styled(Web3StatusGeneric)<{ pending?: boolean }>`
     border:0;
     box-shadow:none;
   }
-  margin-top:1px;
-  margin-bottom:1px;
+
 `
 
 const Text = styled.p`
