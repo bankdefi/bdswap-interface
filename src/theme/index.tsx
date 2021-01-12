@@ -371,7 +371,11 @@ div[data-reach-dialog-content]{
   stroke: #ccc;
 }
 
-
+.open-currency-select-button.sEOpx svg path
+{
+  stroke: white;
+  stroke-width:2px;
+}
 `
 
 export const ThemedGlobalStyle = createGlobalStyle`
