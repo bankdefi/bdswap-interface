@@ -1,0 +1,102 @@
+{
+  "name": "BDSWAP",
+  "logoURI": "https://github.com/bankdefi/token-list/raw/main/token_list.png",
+  "keywords": ["defi", "bdswap", "yield"],
+  "timestamp": "2020-08-25T01:40:34.305Z",
+  "tokens": [
+    {
+      "name": "Wrapped HT",
+      "address": "0x1ed3538383bbfdb80343b18f85d6c5a5fb232fb6",
+      "symbol": "WHT",
+      "decimals": 18,
+      "chainId": 128,
+      "logoURI": "https://raw.githubusercontent.com/bankdefi/token-list/main/icons/HT.png"
+    },
+    {
+      "name": "Heco-Peg HUSD Token",
+      "address": "0x0298c2b32eae4da002a15f36fdf7615bea3da047",
+      "symbol": "HUSD",
+      "decimals": 8,
+      "chainId": 128,
+      "logoURI": "https://raw.githubusercontent.com/bankdefi/token-list/main/icons/HUSD.png"
+    },
+    {
+      "name": "Heco-Peg ETH Token",
+      "address": "0x64ff637fb478863b7468bc97d30a5bf3a428a1fd",
+      "symbol": "ETH",
+      "decimals": 18,
+      "chainId": 128,
+      "logoURI": "https://raw.githubusercontent.com/bankdefi/token-list/main/icons/ETH.png"
+    },
+    {
+      "name": "Heco-Peg HBTC Token",
+      "address": "0x66a79d23e58475d2738179ca52cd0b41d73f0bea",
+      "symbol": "HBTC",
+      "decimals": 18,
+      "chainId": 128,
+      "logoURI": "https://raw.githubusercontent.com/bankdefi/token-list/main/icons/BTC.png"
+    },
+    {
+      "chainId": 256,
+      "address": "0x04f535663110a392a6504839beed34e019fdb4e0",
+      "name": "USDT",
+      "symbol": "USDT",
+      "decimals": 6,
+      "logoURI": "https://raw.githubusercontent.com/bankdefi/token-list/main/icons/wanUSDT.png"
+    },
+    {
+      "chainId": 256,
+      "address": "0xd459dad367788893c17c09e17cfbf0bf25c62833",
+      "name": "USDC",
+      "symbol": "USDC",
+      "decimals": 6,
+      "logoURI": "https://raw.githubusercontent.com/bankdefi/token-list/main/icons/wanUSDC.png"
+    },
+    {
+      "chainId": 256,
+      "address": "0x60d64ef311a4f0e288120543a14e7f90e76304c6",
+      "name": "DAI",
+      "symbol": "DAI",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/bankdefi/token-list/main/icons/wanUSDC.png"
+    },
+    {
+      "chainId": 256,
+      "address": "0x3e24e9d2c824b0ac2c82edc931b67252099b8e79",
+      "name": "LINK",
+      "symbol": "LINK",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/bankdefi/token-list/main/icons/wanUSDC.png"
+    },
+    {
+      "chainId": 256,
+      "address": "0xdb4c5b219168f926c2c0c776438b8355a3a4018e",
+      "name": "TUSD",
+      "symbol": "TUSD",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/bankdefi/token-list/main/icons/wanUSDC.png"
+    },
+    {
+      "chainId": 256,
+      "address": "0x6957e0df854b8dc2cada2bac902544f2c34ebfbd",
+      "name": "WHT",
+      "symbol": "WHT",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/bankdefi/token-list/main/icons/wanUSDC.png"
+    },
+    {
+      "chainId": 256,
+      "address": "0x3bb87041edf93eaea82f47f2b495e5859085e3ee",
+      "name": "BDS",
+      "symbol": "BDS",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/bankdefi/token-list/main/icons/wanUSDC.png"
+    }
+
+  ],
+  "version": {
+    "major": 2,
+    "minor": 1,
+    "patch": 0
+  }
+}
