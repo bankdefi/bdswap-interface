@@ -120,7 +120,7 @@
   "viewOn": "在 hecochain.com 中查看",
   "liquidityProviderRewards": "提供流动性获得奖励",
   "readMoreAboutProvidingLiquidity":"了解更多有关流动性奖励的详情",
-  "liquidityHelper":"流动性提供者从所有交易中赚取0.3%的费用奖励，按照质押比例实时分配，可在退出质押时获得。",
+  "liquidityHelper":"流动性提供者从所有交易中赚取0.25%的费用奖励，按照质押比例实时分配，可在退出质押时获得。",
   "yourLiquidity":"我的流动性",
   "totalDeposited":"Total deposited",
   "createAPair":"新建交易对",
