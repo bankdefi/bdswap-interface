@@ -78,8 +78,8 @@ export default function UniBalanceContent({ setShowUniBalanceModal }: { setShowU
         <CardBGImage />
         <CardNoise />
         <CardSection gap="md">
-          <RowBetween>
-            <TYPE.white color="white">{t('breakdown')}</TYPE.white>
+          <RowBetween style={{justifyContent:'center'}}>
+            <TYPE.white color="white" style={{fontSize:20}}>{t('breakdown')}</TYPE.white>
             <StyledClose stroke="white" onClick={() => setShowUniBalanceModal(false)} />
           </RowBetween>
         </CardSection>
