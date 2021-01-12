@@ -108,7 +108,7 @@ export default function Menu() {
             <Info size={14} />
             Twitter
           </MenuItem>
-          <MenuItem id="link" href="https://medium.com/bankdefi">
+          <MenuItem id="link" href="https://medium.com/@bankdefi">
             <BookOpen size={14} />
             Blog
           </MenuItem>
