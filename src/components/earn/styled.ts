@@ -74,7 +74,11 @@ export const CardSection = styled(AutoColumn)<{ disabled?: boolean }>`
 `
 
 export const Break = styled.div`
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.2);
+  width: calc(100% - 20px);
+  margin:0 auto;
+  border: 0;
+  border-bottom: 1px solid;
+  border-image: linear-gradient(90deg,rgba(255,255,255,0) 0%,rgba(224,224,224,1) 80%,rgba(255,255,255,0) 100%) 1;
+  
   height: 1px;
 `

@@ -2,7 +2,7 @@ import { ChainId, TokenAmount } from '@bdswap/sdk'
 import React, { useMemo } from 'react'
 import { X } from 'react-feather'
 import styled from 'styled-components'
-import tokenLogo from '../../assets/svg/Logomark_WASP_token.svg'
+import tokenLogo from '../../assets/svg/bdlogo_white.svg'
 import { BDS } from '../../constants'
 import { useTotalSupply, useTotalBurned } from '../../data/TotalSupply'
 import { useActiveWeb3React } from '../../hooks'
@@ -23,8 +23,8 @@ const ContentWrapper = styled(AutoColumn)`
 `
 
 const ModalUpper = styled(DataCard)`
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  background: radial-gradient(90% 90% at 0% 0%,#41beec 0%,#123471 100%);
+  box-shadow: rgba(0, 0, 0, 0.18) 10px 8px 15px 5px, rgba(255, 255, 255, 0.565) -8px -10px 15px 5px;
+  background: 'white';
   padding: 0.5rem;
 `
 
