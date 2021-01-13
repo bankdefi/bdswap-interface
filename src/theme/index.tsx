@@ -368,10 +368,10 @@ div[data-reach-dialog-content]{
 }
 .open-currency-select-button svg path
 {
-  stroke: #1d66cd;
+  stroke: #ccc;
 }
 
-.open-currency-select-button.ntGJh svg path
+.open-currency-select-button.sEOpx svg path
 {
   stroke: white;
   stroke-width:2px;

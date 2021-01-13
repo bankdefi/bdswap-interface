@@ -9,7 +9,7 @@ import { ButtonPrimary } from '../Button'
 import { StakingInfo } from '../../state/stake/hooks'
 import { useColor } from '../../hooks/useColor'
 import { currencyId } from '../../utils/currencyId'
-import { Break, CardNoise, CardBGImage } from './styled'
+import { Break } from './styled'
 import { unwrappedToken } from '../../utils/wrappedCurrency'
 import { useTotalSupply } from '../../data/TotalSupply'
 import { usePair } from '../../data/Reserves'
@@ -32,18 +32,15 @@ const StatContainer = styled.div`
 `
 
 const Wrapper = styled(AutoColumn)<{ showBackground: boolean; bgColor: any }>`
-border-radius:20px;
+  box-shadow:rgba(0, 0, 0, 0.18) 10px 8px 15px 5px, rgba(255, 255, 255, 0.565) -8px -10px 15px 5px;
+  border-radius:20px;
   width: 100%;
   overflow: hidden;
   position: relative;
   opacity: ${({ showBackground }) => (showBackground ? '1' : '1')};
-  background: radial-gradient(100% 90% at 20% 0%,#41beec 0%,#123471 100%);
+  background: white;
   color: ${({ theme, showBackground }) => (showBackground ? theme.white : theme.text1)} !important;
 
-  ${({ showBackground }) =>
-    showBackground &&
-    `  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.01), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04),
-    0px 24px 32px rgba(0, 0, 0, 0.01);`}
 `
 
 const TopSection = styled.div`
@@ -141,14 +138,12 @@ export default function PoolCard({ stakingInfo }: { stakingInfo: StakingInfo }) 
 
   return (
     <Wrapper showBackground={isStaking} bgColor={backgroundColor}>
-      <CardBGImage desaturate />
-      <CardNoise />
-
+      
       <TopSection>
         <DoubleCurrencyLogo currency0={currency0} currency1={currency1} size={24} />
-        <TYPE.white fontWeight={600} fontSize={18} style={{ marginLeft: '8px' }}>
+        <TYPE.black fontWeight={600} fontSize={18} style={{ marginLeft: '8px' }}>
           {currency0.symbol} / {currency1.symbol}
-        </TYPE.white>
+        </TYPE.black>
 
         <StyledInternalLink to={`/farm/${currencyId(currency0)}/${currencyId(currency1)}`} style={{ width: '100%',color:'transparent' }}>
           <ButtonPrimary padding="8px" borderRadius="8px">
@@ -159,21 +154,21 @@ export default function PoolCard({ stakingInfo }: { stakingInfo: StakingInfo }) 
 
       <StatContainer>
         <RowBetween>
-          <TYPE.white>{t('totalDeposited')}</TYPE.white>
-          <TYPE.white>
+          <TYPE.black>{t('totalDeposited')}</TYPE.black>
+          <TYPE.black>
             {valueOfTotalStakedAmountInUSDC
-              ? `$${valueOfTotalStakedAmountInUSDC.toFixed(0, { groupSeparator: ',' })} 🔥 APY: ${apy}%`
+              ? `$${valueOfTotalStakedAmountInUSDC.toFixed(0, { groupSeparator: ',' })} 🏆 APY: ${apy}%`
               //  +
               //   ' / ' +
               //   `${valueOfTotalStakedAmountInWLSP?.toSignificant(6, { groupSeparator: ',' }) ?? '-'} BDSLP`
               : `${valueOfTotalStakedAmountInWLSP?.toSignificant(6, { groupSeparator: ',' }) ?? '-'} BDSLP`}
-          </TYPE.white>
+          </TYPE.black>
         </RowBetween>
         <RowBetween>
-          <TYPE.white> Pool rate </TYPE.white>
-          <TYPE.white>{`${stakingInfo.totalRewardRate
-            ?.multiply(`${60 * 60 * 24 * 7}`)
-            ?.toFixed(0, { groupSeparator: ',' })} BDS / week`}</TYPE.white>
+          <TYPE.black> Pool rate </TYPE.black>
+          <TYPE.black>{`${stakingInfo.totalRewardRate
+            ?.multiply(`${60 * 60 * 24 * 7 / 3}`)
+            ?.toFixed(0, { groupSeparator: ',' })} BDS / week`}</TYPE.black>
         </RowBetween>
       </StatContainer>
 
@@ -181,13 +176,13 @@ export default function PoolCard({ stakingInfo }: { stakingInfo: StakingInfo }) 
         <>
           <Break />
           <BottomSection showBackground={true}>
-            <TYPE.black color={'white'} fontWeight={500}>
+            <TYPE.black fontWeight={500}>
               <span>Your rate</span>
             </TYPE.black>
 
-            <TYPE.black style={{ textAlign: 'right' }} color={'white'} fontWeight={500}>
+            <TYPE.black style={{ textAlign: 'right' }} fontWeight={500}>
               <span  id="animate-zoom" role="img" aria-label="wizard-icon" style={{ marginRight: '0.5rem' }}>
-              ⚡
+              💗
               </span>
               {`${stakingInfo.rewardRate
                 ?.multiply(`${60 * 60 * 24 * 7}`)

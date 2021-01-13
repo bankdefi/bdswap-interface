@@ -333,13 +333,13 @@ export default function AddLiquidity({
                 <ColumnCenter>
                   <BlueCard>
                     <AutoColumn gap="10px">
-                      <TYPE.link fontWeight={600} color={'primaryText1'}>
+                      <TYPE.link fontWeight={600} color="#FFFFFF">
                         {t('youAreFirst')}
                       </TYPE.link>
-                      <TYPE.link fontWeight={400} color={'primaryText1'}>
+                      <TYPE.link fontWeight={400} color="#FFFFFF">
                         {t('theRadioOfToken')}
                       </TYPE.link>
-                      <TYPE.link fontWeight={400} color={'primaryText1'}>
+                      <TYPE.link fontWeight={400} color="#FFFFFF">
                         {t('onceYouAreHappy')}
                       </TYPE.link>
                     </AutoColumn>

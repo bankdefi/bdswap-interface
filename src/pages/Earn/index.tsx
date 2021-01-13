@@ -25,7 +25,7 @@ const PoolSection = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   column-gap: 10px;
-  row-gap: 15px;
+  row-gap: 25px;
   width: 100%;
   justify-self: center;
 `

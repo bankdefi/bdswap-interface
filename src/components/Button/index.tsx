@@ -297,7 +297,7 @@ export function ButtonDropdown({ disabled = false, children, ...rest }: { disabl
 
 export function ButtonDropdownLight({ disabled = false, children, ...rest }: { disabled?: boolean } & ButtonProps) {
   return (
-    <ButtonOutlined style={{background:'rgb(26,61,119)'}} {...rest} disabled={disabled}>
+    <ButtonOutlined style={{background:'transparent',borderColor:'rgb(200,200,200)'}} {...rest} disabled={disabled}>
       <RowBetween>
         <div style={{ display: 'flex', alignItems: 'center' }}>{children}</div>
         <ChevronDown size={24} />

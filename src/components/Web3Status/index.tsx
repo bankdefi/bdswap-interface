@@ -74,19 +74,24 @@ const Web3StatusConnect = styled(Web3StatusGeneric)<{ faded?: boolean }>`
 `
 
 const Web3StatusConnected = styled(Web3StatusGeneric)<{ pending?: boolean }>`
-  background-color: ${({ pending, theme }) => (pending ? theme.primary1 : '#2C2F36')};
+  background-color: ${({ pending, theme }) => (pending ? '#2C2F36' : '#2C2F36')};
   border:0;
   color: ${({ pending, theme }) => (pending ? theme.white : theme.white)};
   font-weight: 500;
   :hover,
-  :active,
+  
   :focus {
-    background-color: ${({ pending, theme }) => (pending ? darken(0.05, theme.primary1) : lighten(0.05, '#2C2F36'))};
+    background-color: ${({ pending, theme }) => (pending ? darken(0.05, '#2C2F36') : lighten(0.05, '#2C2F36'))};
     border:0;
     box-shadow:none;
   }
-  margin-top:1px;
-  margin-bottom:1px;
+  :active
+  {
+    background-color: #4d4d4d;
+    border:0;
+    box-shadow:none;
+  }
+
 `
 
 const Text = styled.p`
