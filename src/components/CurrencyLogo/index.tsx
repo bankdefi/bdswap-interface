@@ -10,22 +10,22 @@ import Logo from '../Logo'
 
 const getTokenLogoURL = (address: string) => {
   if (address.toLowerCase() === HBTC.address.toLowerCase()) {
-    return 'https://raw.githubusercontent.com/bankdefi/token-list/main/icons/BTC.png';
+    return 'https://token-icons.vercel.app/icon/BTC.png';
   }
 
   if (address.toLowerCase() === HETH.address.toLowerCase()) {
-    return 'https://raw.githubusercontent.com/bankdefi/token-list/main/icons/ETH.png';
+    return 'https://token-icons.vercel.app/icon/ETH.png';
   }
 
   if (address.toLowerCase() === '0x64ff637fb478863b7468bc97d30a5bf3a428a1fd') {
-    return 'https://raw.githubusercontent.com/bankdefi/token-list/main/icons/ETH.png';
+    return 'https://token-icons.vercel.app/icon/ETH.png';
   }
 
   if (address.toLowerCase() === '0x1ed3538383bbfdb80343b18f85d6c5a5fb232fb6') {
-    return 'https://raw.githubusercontent.com/bankdefi/token-list/main/icons/HT.png';
+    return 'https://token-icons.vercel.app/icon/HT.png';
   }
 
-  return (`https://www.wanscan.org/img/tokens/${address}.png`).toLowerCase()
+  return (`https://token-icons.vercel.app/tokens/${address}.png`).toLowerCase()
 }
 
 const StyledEthereumLogo = styled.img<{ size: string }>`
