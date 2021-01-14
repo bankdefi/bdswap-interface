@@ -93,7 +93,7 @@ export default function Earn() {
               </RowBetween>{' '}
               <ExternalLink
                 style={{ color: 'white', textDecoration: 'underline' }}
-                href="https://medium.com/wanswap/introducing-wanswap-the-wanchain-based-cross-chain-decentralized-exchange-with-automated-market-5e5f5956c223"
+                href="https://docs.bankdefi.finance"
                 target="_blank"
               >
                 <TYPE.white fontSize={14}>Read more about BDS</TYPE.white>

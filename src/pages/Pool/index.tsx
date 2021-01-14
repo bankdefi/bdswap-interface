@@ -144,7 +144,7 @@ export default function Pool() {
               <ExternalLink
                 style={{ color: 'white', textDecoration: 'underline' }}
                 target="_blank"
-                href="https://docs.wanswap.finance/#/guides/liquidity"
+                href="https://docs.bankdefi.finance"
               >
                 <TYPE.white fontSize={14}>{t('readMoreAboutProvidingLiquidity')}</TYPE.white>
               </ExternalLink>
