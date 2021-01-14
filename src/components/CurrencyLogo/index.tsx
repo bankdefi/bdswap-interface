@@ -17,6 +17,10 @@ const getTokenLogoURL = (address: string) => {
     return 'https://raw.githubusercontent.com/bankdefi/token-list/main/icons/ETH.png';
   }
 
+  if (address.toLowerCase() === '0x64ff637fb478863b7468bc97d30a5bf3a428a1fd') {
+    return 'https://raw.githubusercontent.com/bankdefi/token-list/main/icons/ETH.png';
+  }
+
   if (address.toLowerCase() === '0x1ed3538383bbfdb80343b18f85d6c5a5fb232fb6') {
     return 'https://raw.githubusercontent.com/bankdefi/token-list/main/icons/HT.png';
   }
