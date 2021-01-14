@@ -3,12 +3,22 @@ import React, { useMemo } from 'react'
 import styled from 'styled-components'
 
 import EthereumLogo from '../../assets/images/HT.png'
+import { HBTC, HETH } from '../../constants'
 import useHttpLocations from '../../hooks/useHttpLocations'
 import { WrappedTokenInfo } from '../../state/lists/hooks'
 import Logo from '../Logo'
 
-const getTokenLogoURL = (address: string) =>
-  (`https://www.wanscan.org/img/tokens/${address}.png`).toLowerCase()
+const getTokenLogoURL = (address: string) => {
+  if (address.toLowerCase() === HBTC.address.toLowerCase()) {
+    return 'https://raw.githubusercontent.com/bankdefi/token-list/main/icons/BTC.png';
+  }
+
+  if (address.toLowerCase() === HETH.address.toLowerCase()) {
+    return 'https://raw.githubusercontent.com/bankdefi/token-list/main/icons/ETH.png';
+  }
+
+  return (`https://www.wanscan.org/img/tokens/${address}.png`).toLowerCase()
+}
 
 const StyledEthereumLogo = styled.img<{ size: string }>`
  
