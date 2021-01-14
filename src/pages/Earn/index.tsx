@@ -48,6 +48,7 @@ export default function Earn() {
   const stakingRewardsExist = Boolean(typeof chainId === 'number' && (stakingRewardsInfo[chainId]?.length ?? 0) > 0)
 
   const [tvlValue, setTvlValue] = useState('TVL: loading...')
+  console.debug('TVL', tvlValue);
   useEffect(()=>{
     let timer = setInterval(()=>{
       let tvl = 0;
@@ -104,7 +105,7 @@ export default function Earn() {
           <CardNoise />
         </DataCard>
 
-        <DataCard>
+        {/* <DataCard>
           <CardBGImage />
           <CardNoise />
           <CardSection>
@@ -116,7 +117,7 @@ export default function Earn() {
           </CardSection>
           <CardBGImage />
           <CardNoise />
-        </DataCard>
+        </DataCard> */}
 
       </TopSection>
 
