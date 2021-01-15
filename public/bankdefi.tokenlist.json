@@ -23,7 +23,7 @@
     {
       "name": "Heco-Peg ETH Token",
       "address": "0x64ff637fb478863b7468bc97d30a5bf3a428a1fd",
-      "symbol": "ETH",
+      "symbol": "HETH",
       "decimals": 18,
       "chainId": 128,
       "logoURI": "https://token-icons.vercel.app/icon/ETH.png"
