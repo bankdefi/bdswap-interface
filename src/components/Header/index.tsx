@@ -420,7 +420,7 @@ export default function Header() {
                     </TYPE.white>
                   </HideSmall>
                 )
-                :<img style={{marginLeft:'-20px',marginRight:'5px'}} height={'46px'} src="./images/BDSToken.svg" alt="logo" />
+                :<img style={{marginLeft:'-15px',marginRight:'5px'}} height={'46px'} src="./images/BDSToken.svg" alt="logo" />
                 
                 
               }
