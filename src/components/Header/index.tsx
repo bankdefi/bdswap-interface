@@ -136,11 +136,13 @@ const AccountElement = styled.div<{ active: boolean }>`
 `
 
 const UNIAmount = styled(AccountElement)`
-  color: white;
+  
   padding: 4px 8px;
   height: 36px;
   font-weight: 500;
-  background: linear-gradient(90deg,rgb(0,169,157) 0%,rgb(40,171,224) 100%);
+  background:white;
+  border:2px solid rgb(0,169,157);
+  color: rgb(0,169,157);
 `
 
 const UNIWrapper = styled.span`
@@ -385,7 +387,7 @@ export default function Header() {
                     <TYPE.white
                       style={{
                         paddingRight: '.4rem',
-                        color:'white'
+                        color:'rgb(0,169,157)'
                       }}
                     >
                       <CountUp
@@ -404,7 +406,7 @@ export default function Header() {
                     <TYPE.white
                       style={{
                         paddingRight: '.4rem',
-                        color:'white'
+                        color:'rgb(0,169,157)'
                       }}
                     >
                       <CountUp
@@ -418,7 +420,8 @@ export default function Header() {
                     </TYPE.white>
                   </HideSmall>
                 )
-                :<span></span>
+                :<img style={{marginLeft:'-20px',marginRight:'5px'}} height={'46px'} src="./images/BDSToken.svg" alt="logo" />
+                
                 
               }
                 BDS
