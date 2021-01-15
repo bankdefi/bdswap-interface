@@ -48,6 +48,7 @@ export default function Earn() {
   const stakingRewardsExist = Boolean(typeof chainId === 'number' && (stakingRewardsInfo[chainId]?.length ?? 0) > 0)
 
   const [tvlValue, setTvlValue] = useState('TVL: loading...')
+  console.debug('TVL', tvlValue);
   useEffect(()=>{
     let timer = setInterval(()=>{
       let tvl = 0;
@@ -92,7 +93,7 @@ export default function Earn() {
               </RowBetween>{' '}
               <ExternalLink
                 style={{ color: 'white', textDecoration: 'underline' }}
-                href="https://medium.com/wanswap/introducing-wanswap-the-wanchain-based-cross-chain-decentralized-exchange-with-automated-market-5e5f5956c223"
+                href="https://docs.bankdefi.finance"
                 target="_blank"
               >
                 <TYPE.white fontSize={14}>Read more about BDS</TYPE.white>
@@ -104,7 +105,7 @@ export default function Earn() {
           <CardNoise />
         </DataCard>
 
-        <DataCard>
+        {/* <DataCard>
           <CardBGImage />
           <CardNoise />
           <CardSection>
@@ -116,7 +117,7 @@ export default function Earn() {
           </CardSection>
           <CardBGImage />
           <CardNoise />
-        </DataCard>
+        </DataCard> */}
 
       </TopSection>
 

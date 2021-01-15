@@ -104,10 +104,10 @@ export default function Menu() {
 
       {open && (
         <MenuFlyout>
-          <MenuItem id="link" href="https://twitter.com/bankdefi">
+          {false && <MenuItem id="link" href="https://twitter.com/bankdefi">
             <Info size={14} />
             Twitter
-          </MenuItem>
+          </MenuItem>}
           <MenuItem id="link" href="https://medium.com/@bankdefi">
             <BookOpen size={14} />
             Blog
@@ -124,10 +124,11 @@ export default function Menu() {
             <Code size={14} />
             Code
           </MenuItem>
-          { <MenuItem id="link" href="https://t.me/bankdefi_official">
+          {false && <MenuItem id="link" href="https://t.me/bankdefi_official">
             <MessageCircle size={14} />
             Telegram
-          </MenuItem>
+          </MenuItem>}
+          {
           /*
           <MenuItem id="link" href="https://uniswap.info/">
             <PieChart size={14} />

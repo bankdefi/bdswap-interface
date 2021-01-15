@@ -16,7 +16,7 @@ type ChainTokenList = {
   readonly [chainId in ChainId]: Token[]
 }
 
-export const HUSD = new Token(ChainId.HECO_MAINNET, '0x0298c2b32eae4da002a15f36fdf7615bea3da047', 18, 'HUSD', 'HUSD')
+// export const HUSD = new Token(ChainId.HECO_MAINNET, '0x0298c2b32eae4da002a15f36fdf7615bea3da047', 18, 'HUSD', 'HUSD')
 export const DAI = new Token(ChainId.HECO_MAINNET, '0x60d64ef311a4f0e288120543a14e7f90e76304c6', 18, 'DAI', 'Dai Stablecoin')
 export const USDC = new Token(ChainId.HECO_MAINNET, '0xd459dad367788893c17c09e17cfbf0bf25c62833', 6, 'USDC', 'USDC')
 export const USDT = new Token(ChainId.HECO_MAINNET, '0x20df0e46ec48872478ed04c81de8bb0a1fb99afd', 6, 'USDT', 'Tether USD')
@@ -29,6 +29,12 @@ export const USDT1 = new Token(ChainId.HECO_TESTNET, '0x04f535663110a392a6504839
 export const wanBTC = new Token(ChainId.HECO_MAINNET, '0xd15e200060fc17ef90546ad93c1c61bfefdc89c7', 8, 'wanBTC', 'wanBTC')
 export const wanETH = new Token(ChainId.HECO_MAINNET, '0xe3ae74d1518a76715ab4c7bedf1af73893cd435a', 18, 'wanETH', 'wanETH')
 
+export const HBTC = new Token(ChainId.HECO_MAINNET, '0x66a79d23e58475d2738179ca52cd0b41d73f0bea', 18, 'HBTC', 'Heco-Peg BTC Token');
+export const HUSD = new Token(ChainId.HECO_MAINNET, '0x0298c2b32eae4da002a15f36fdf7615bea3da047', 8, 'HUSD', 'Heco-Peg HUSD Token');
+export const HETH = new Token(ChainId.HECO_MAINNET, '0x64ff637fb478863b7468bc97d30a5bf3a428a1fd', 18, 'HETH', 'Heco-Peg ETH Token');
+// export const HBTC = new Token(ChainId.HECO_MAINNET, '0x66a79d23e58475d2738179ca52cd0b41d73f0bea', 18, 'HBTC', 'Heco-Peg HBTC Token');
+
+
 // TODO this is only approximate, it's actually based on blocks
 export const PROPOSAL_LENGTH_IN_DAYS = 7
 
@@ -36,7 +42,7 @@ export const GOVERNANCE_ADDRESS = '0x5e4be8Bc9637f0EAA1A755019e06A68ce081D58F'
 
 export const TIMELOCK_ADDRESS = '0x1a9C8182C09F50C8318d769245beA52c32BE35BC'
 
-const UNI_ADDRESS = '0x3Bb87041edF93EaEA82F47F2B495E5859085E3eE'
+const UNI_ADDRESS = '0x69120197b77b51d32fFA5eAfe16b3d78115640c6'
 const UNI_ADDRESS_TESTNET = '0x3Bb87041edF93EaEA82F47F2B495E5859085E3eE'
 export const BDS: { [chainId in ChainId]: Token } = {
   [ChainId.MAINNET]: new Token(ChainId.MAINNET, UNI_ADDRESS, 18, 'BDS', 'BDSwap'),
@@ -94,7 +100,7 @@ export const SUGGESTED_BASES: ChainTokenList = {
 // used to construct the list of all pairs we consider by default in the frontend
 export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
   ...WETH_ONLY,
-  [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], HUSD]
+  [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], HUSD, HBTC, HETH]
 }
 
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
@@ -108,7 +114,8 @@ export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } 
   ],
   [ChainId.HECO_MAINNET]: [
     [USDC, USDT],
-    [DAI, USDT]
+    [DAI, USDT],
+    [HBTC, HETH],
   ],
   [ChainId.HECO_TESTNET]: [
     [

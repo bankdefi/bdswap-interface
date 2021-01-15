@@ -12,7 +12,7 @@ import { wrappedCurrency } from './wrappedCurrency'
 export default function useUSDCPrice(currency?: Currency): Price | undefined {
   const { chainId } = useActiveWeb3React()
   const wrapped = wrappedCurrency(currency, chainId)
-  const USD = useMemo(() => (chainId === ChainId.MAINNET ? USDT : USDT1), [chainId])
+  const USD = useMemo(() => (chainId === ChainId.HECO_MAINNET ? USDT : USDT1), [chainId])
   const tokenPairs: [Currency | undefined, Currency | undefined][] = useMemo(
     () => [
       [

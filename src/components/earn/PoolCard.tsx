@@ -167,7 +167,7 @@ export default function PoolCard({ stakingInfo }: { stakingInfo: StakingInfo }) 
         <RowBetween>
           <TYPE.black> Pool rate </TYPE.black>
           <TYPE.black>{`${stakingInfo.totalRewardRate
-            ?.multiply(`${60 * 60 * 24 * 7 / 3}`)
+            ?.multiply(`${60 * 60 * 24 * 7}`)
             ?.toFixed(0, { groupSeparator: ',' })} BDS / week`}</TYPE.black>
         </RowBetween>
       </StatContainer>
