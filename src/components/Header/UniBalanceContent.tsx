@@ -78,8 +78,8 @@ export default function UniBalanceContent({ setShowUniBalanceModal }: { setShowU
         <CardBGImage />
         <CardNoise />
         <CardSection gap="md">
-          <RowBetween style={{justifyContent:'center'}}>
-            <TYPE.white color="white" style={{fontSize:20}}>{t('breakdown')}</TYPE.white>
+          <RowBetween style={{ justifyContent: 'center' }}>
+            <TYPE.white color="white" style={{ fontSize: 20 }}>{t('breakdown')}</TYPE.white>
             <StyledClose stroke="white" onClick={() => setShowUniBalanceModal(false)} />
           </RowBetween>
         </CardSection>
@@ -88,9 +88,9 @@ export default function UniBalanceContent({ setShowUniBalanceModal }: { setShowU
           <>
             <CardSection gap="sm">
               <AutoColumn gap="md" justify="center">
-                <div style={{position:'relative'}}>
-                <img src={tokenLogo} style={{width:120,height:120,position:'absolute',filter: 'drop-shadow(rgba(0, 0, 0, 0.3) 8px 8px 10px) drop-shadow(rgba(255, 255, 255, 0.565) -5px -5px 10px)'}}/>
-                <UniTokenAnimated width="120px" src={tokenLogo} />{' '}
+                <div style={{ position: 'relative' }}>
+                  <img src={tokenLogo} alt={'icon'} style={{ width: 120, height: 120, position: 'absolute', filter: 'drop-shadow(rgba(0, 0, 0, 0.3) 8px 8px 10px) drop-shadow(rgba(255, 255, 255, 0.565) -5px -5px 10px)' }} />
+                  <UniTokenAnimated width="120px" src={tokenLogo} />{' '}
                 </div>
                 <TYPE.white fontSize={48} fontWeight={600} color="white">
                   {total?.toFixed(2, { groupSeparator: ',' })}
