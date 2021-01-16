@@ -56,7 +56,7 @@ export default function CurrencyLogo({
     if (currency === ETHER) return []
 
     if (currency?.symbol === 'BDS') {
-      return [require('../../assets/svg/Logomark_WASP_token.svg')]
+      return [require('../../assets/svg/BDSToken.svg')]
     }
 
     if (currency instanceof Token) {
