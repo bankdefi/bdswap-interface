@@ -58,7 +58,7 @@ export default function UniBalanceContent({ setShowUniBalanceModal }: { setShowU
   // const unclaimedUni = useTokenBalance(useMerkleDistributorContract()?.address, uni)
   const circulation: TokenAmount | undefined = useMemo(
     () =>
-      blockTimestamp && uni && chainId === ChainId.MAINNET
+      blockTimestamp && uni && chainId === ChainId.HECO_MAINNET
         ? totalSupply?.subtract(totalBurned ? totalBurned : new TokenAmount(uni!, '0'))
         : totalSupply?.subtract(totalBurned ? totalBurned : new TokenAmount(uni!, '0')),
     [blockTimestamp, chainId, totalSupply, uni, totalBurned]
@@ -66,7 +66,7 @@ export default function UniBalanceContent({ setShowUniBalanceModal }: { setShowU
 
   const burned: TokenAmount | undefined = useMemo(
     () =>
-      blockTimestamp && uni && chainId === ChainId.MAINNET
+      blockTimestamp && uni && chainId === ChainId.HECO_MAINNET
         ? totalBurned
         : totalBurned,
     [blockTimestamp, chainId, totalBurned, uni]
@@ -130,8 +130,8 @@ export default function UniBalanceContent({ setShowUniBalanceModal }: { setShowU
               <TYPE.white color="white">{t('totalSupply')}</TYPE.white>
               <TYPE.white color="white">{totalSupply?.toFixed(0, { groupSeparator: ',' })}</TYPE.white>
             </RowBetween> */}
-            {uni && uni.chainId === ChainId.MAINNET ? (
-              <ExternalLink href={`https://www.wanscan.org/token/${uni.address}`}>View BDS Token Information</ExternalLink>
+            {uni && uni.chainId === ChainId.HECO_MAINNET ? (
+              <ExternalLink href={`https://scan.hecochain.com/token/${uni.address}`}>View BDS Token Information</ExternalLink>
             ) : null}
           </AutoColumn>
         </CardSection>

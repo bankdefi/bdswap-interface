@@ -77,8 +77,8 @@ export function useAllStakingRewardsInfo() {
         stakingRewardAddress: string
       }[]
     } = {
-      [ChainId.MAINNET]: [],
-      [ChainId.ROPSTEN]: []
+      [ChainId.HECO_MAINNET]: [],
+      [ChainId.HECO_TESTNET]: []
     }
     lpTokenAddr.forEach((_v, _i) => {
       if (!_v || !chainId) return
