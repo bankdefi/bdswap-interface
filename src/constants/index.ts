@@ -78,7 +78,7 @@ const WETH_ONLY: ChainTokenList = {
 // used to construct intermediary pairs for trading
 export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
   ...WETH_ONLY,
-  [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], HUSD]
+  [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], HUSD, HBTC, HETH, BDS[ChainId.MAINNET]]
 }
 
 /**
@@ -94,13 +94,13 @@ export const CUSTOM_BASES: { [chainId in ChainId]?: { [tokenAddress: string]: To
 // used for display in the default list when adding liquidity
 export const SUGGESTED_BASES: ChainTokenList = {
   ...WETH_ONLY,
-  [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], HUSD]
+  [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], HUSD, HBTC, HETH, BDS[ChainId.MAINNET]]
 }
 
 // used to construct the list of all pairs we consider by default in the frontend
 export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
   ...WETH_ONLY,
-  [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], HUSD, HBTC, HETH]
+  [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], HUSD, HBTC, HETH, BDS[ChainId.MAINNET]]
 }
 
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
@@ -113,8 +113,6 @@ export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } 
     [DAI, USDT]
   ],
   [ChainId.HECO_MAINNET]: [
-    [USDC, USDT],
-    [DAI, USDT],
     [HBTC, HETH],
   ],
   [ChainId.HECO_TESTNET]: [

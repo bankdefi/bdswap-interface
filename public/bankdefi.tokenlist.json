@@ -5,6 +5,14 @@
   "timestamp": "2020-08-25T01:40:34.305Z",
   "tokens": [
     {
+      "name": "BDS",
+      "address": "0x69120197b77b51d32ffa5eafe16b3d78115640c6",
+      "symbol": "BDS",
+      "decimals": 18,
+      "chainId": 128,
+      "logoURI": "https://token-icons.vercel.app/icon/BDS.png"
+    },
+    {
       "name": "Wrapped HT",
       "address": "0x1ed3538383bbfdb80343b18f85d6c5a5fb232fb6",
       "symbol": "WHT",
@@ -96,7 +104,7 @@
   ],
   "version": {
     "major": 3,
-    "minor": 0,
-    "patch": 1
+    "minor": 1,
+    "patch": 0
   }
 }
