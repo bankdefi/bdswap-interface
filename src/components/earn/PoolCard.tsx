@@ -157,7 +157,7 @@ export default function PoolCard({ stakingInfo }: { stakingInfo: StakingInfo }) 
           <TYPE.black>{t('totalDeposited')}</TYPE.black>
           <TYPE.black>
             {valueOfTotalStakedAmountInUSDC
-              ? `$${valueOfTotalStakedAmountInUSDC.toFixed(0, { groupSeparator: ',' })} 🏆 APY: ${apy}%`
+              ? `$${valueOfTotalStakedAmountInUSDC.toFixed(0, { groupSeparator: ',' })} ` //🏆 APY: ${apy}%
               //  +
               //   ' / ' +
               //   `${valueOfTotalStakedAmountInWLSP?.toSignificant(6, { groupSeparator: ',' }) ?? '-'} BDSLP`
