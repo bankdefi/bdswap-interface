@@ -330,8 +330,11 @@ export default function Header() {
             {t('pool')}
           </StyledNavLink>
           <StyledNavLink id={`stake-nav-link`} to={'/farm'}>
-                {t('miningPool')}
+            {t('miningPool')}
           </StyledNavLink>
+          <StyledExternalLink id={`stake-nav-link`} href={'https://marketplace.bankdefi.finance/'}>
+            {t('wanLend')}
+          </StyledExternalLink>
           {
             false && (<>
               
@@ -344,9 +347,7 @@ export default function Header() {
               <StyledExternalLink id={`stake-nav-link`} href={'https://bridge.wanchain.org/'}>
                 {t('crossChain')} <span style={{ fontSize: '11px' }}>↗</span>
               </StyledExternalLink>
-              <StyledExternalLink id={`stake-nav-link`} href={'https://wanlend.finance/'}>
-                {t('wanLend')} <span style={{ fontSize: '11px' }}>↗</span>
-              </StyledExternalLink>
+              
               <StyledExternalLink id={`stake-nav-link`} href={'https://auction.wanswap.finance/'}>
                 {t('auction')} <span style={{ fontSize: '11px' }}>↗</span>
               </StyledExternalLink>
