@@ -32,6 +32,7 @@ export const wanETH = new Token(ChainId.HECO_MAINNET, '0xe3ae74d1518a76715ab4c7b
 export const HBTC = new Token(ChainId.HECO_MAINNET, '0x66a79d23e58475d2738179ca52cd0b41d73f0bea', 18, 'HBTC', 'Heco-Peg BTC Token');
 export const HUSD = new Token(ChainId.HECO_MAINNET, '0x0298c2b32eae4da002a15f36fdf7615bea3da047', 8, 'HUSD', 'Heco-Peg HUSD Token');
 export const HETH = new Token(ChainId.HECO_MAINNET, '0x64ff637fb478863b7468bc97d30a5bf3a428a1fd', 18, 'HETH', 'Heco-Peg ETH Token');
+export const BDL = new Token(ChainId.HECO_MAINNET, '0xbb2edc71b5b0ec0eea892fb821c101e4db18b550', 18, 'BDL', 'BDL');
 // export const HBTC = new Token(ChainId.HECO_MAINNET, '0x66a79d23e58475d2738179ca52cd0b41d73f0bea', 18, 'HBTC', 'Heco-Peg HBTC Token');
 
 
@@ -78,7 +79,7 @@ const WETH_ONLY: ChainTokenList = {
 // used to construct intermediary pairs for trading
 export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
   ...WETH_ONLY,
-  [ChainId.HECO_MAINNET]: [...WETH_ONLY[ChainId.HECO_MAINNET], HUSD, HBTC, HETH, BDS[ChainId.HECO_MAINNET]]
+  [ChainId.HECO_MAINNET]: [...WETH_ONLY[ChainId.HECO_MAINNET], HUSD, HBTC, HETH, BDS[ChainId.HECO_MAINNET], BDL]
 }
 
 /**
@@ -94,13 +95,13 @@ export const CUSTOM_BASES: { [chainId in ChainId]?: { [tokenAddress: string]: To
 // used for display in the default list when adding liquidity
 export const SUGGESTED_BASES: ChainTokenList = {
   ...WETH_ONLY,
-  [ChainId.HECO_MAINNET]: [...WETH_ONLY[ChainId.HECO_MAINNET], HUSD, HBTC, HETH, BDS[ChainId.HECO_MAINNET]]
+  [ChainId.HECO_MAINNET]: [...WETH_ONLY[ChainId.HECO_MAINNET], HUSD, HBTC, HETH, BDS[ChainId.HECO_MAINNET], BDL]
 }
 
 // used to construct the list of all pairs we consider by default in the frontend
 export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
   ...WETH_ONLY,
-  [ChainId.HECO_MAINNET]: [...WETH_ONLY[ChainId.HECO_MAINNET], HUSD, HBTC, HETH, BDS[ChainId.HECO_MAINNET]]
+  [ChainId.HECO_MAINNET]: [...WETH_ONLY[ChainId.HECO_MAINNET], HUSD, HBTC, HETH, BDS[ChainId.HECO_MAINNET], BDL]
 }
 
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
