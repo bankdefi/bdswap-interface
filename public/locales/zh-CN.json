@@ -122,7 +122,7 @@
   "readMoreAboutProvidingLiquidity":"了解更多有关流动性奖励的详情",
   "liquidityHelper":"流动性提供者从所有交易中赚取0.25%的费用奖励，按照质押比例实时分配，可在退出质押时获得。",
   "yourLiquidity":"我的流动性",
-  "totalDeposited":"Total deposited",
+  "totalDeposited":"Pool Information",
   "createAPair":"新建交易对",
   "connectLiquidity":"连接钱包查看我的流动性",
   "loading":"加载中",
