@@ -28,6 +28,8 @@ export default function useUSDCPrice(currency?: Currency): Price | undefined {
   )
   const [[ethPairState, ethPair], [usdcPairState, usdcPair], [usdcEthPairState, usdcEthPair]] = usePairs(tokenPairs)
 
+  console.debug('useUSDCPrice', currency, ethPair, usdcPair, usdcEthPair);
+
   return useMemo(() => {
     if (!currency || !wrapped || !chainId) {
       return undefined
@@ -36,6 +38,7 @@ export default function useUSDCPrice(currency?: Currency): Price | undefined {
     if (wrapped.equals(WETH[chainId])) {
       if (usdcPair) {
         const price = usdcPair.priceOf(WETH[chainId])
+        console.debug('price', price.toFixed(8));
         return new Price(currency, USD, price.denominator, price.numerator)
       } else {
         return undefined
@@ -52,7 +55,13 @@ export default function useUSDCPrice(currency?: Currency): Price | undefined {
 
     // all other tokens
     // first try the usdc pair
-    if (usdcPairState === PairState.EXISTS && usdcPair && usdcPair.reserveOf(USD).greaterThan(ethPairETHUSDCValue)) {
+    console.debug('usdcPairState', usdcPairState);
+    if (usdcPairState === PairState.EXISTS && usdcPair 
+       && 
+      //  usdcPair.reserveOf(USD).greaterThan(
+        ethPairETHUSDCValue
+        // )
+      ) {
       const price = usdcPair.priceOf(wrapped)
       return new Price(currency, USD, price.denominator, price.numerator)
     }

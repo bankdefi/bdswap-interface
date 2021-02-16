@@ -129,6 +129,16 @@ export default function PoolCard({ stakingInfo }: { stakingInfo: StakingInfo }) 
   const weekReward = stakingInfo.totalRewardRate?.multiply(`${60 * 60 * 24 * 7}`)?.toFixed(0)
   const apy = valueOfTotalStakedAmountInUSDC && weekReward && uniPrice ? (Number(weekReward) * Number(uniPrice?.toFixed(8)) / Number(valueOfTotalStakedAmountInUSDC.toFixed(0)) / 7 * 365 * 100).toFixed(0) : '--' 
   console.debug('apy:', apy.toString(), '%');
+  console.debug('apy', apy.toString(), 
+    'valueOfTotalStakedAmountInUSDC', valueOfTotalStakedAmountInUSDC && valueOfTotalStakedAmountInUSDC.toFixed(0),
+    'valueOfTotalStakedAmountInWETH', valueOfTotalStakedAmountInWETH && valueOfTotalStakedAmountInWETH.toFixed(0),
+    'USDPrice', USDPrice&&USDPrice.toFixed(8),
+    'stakingTokenPair', stakingTokenPair && stakingTokenPair,
+    'reserveOf', stakingTokenPair && stakingTokenPair.reserveOf(WETH).toFixed(8),
+    'WETH', WETH.address,
+    'totalStakedAmount', stakingInfo && stakingInfo.totalStakedAmount.toFixed(8),
+    'totalSupplyOfStakingToken', totalSupplyOfStakingToken && totalSupplyOfStakingToken.toFixed(8),
+    weekReward.toString(), uniPrice?.toFixed(8));
 
   if (valueOfTotalStakedAmountInUSDC && stakingTokenPair) {
     if (!window.tvlItems) {

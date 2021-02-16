@@ -118,6 +118,8 @@ export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } 
     [WETH[ChainId.HECO_MAINNET], HETH],
     [WETH[ChainId.HECO_MAINNET], HBTC],
     [WETH[ChainId.HECO_MAINNET], HUSD],
+    [HUSD, BDS[ChainId.HECO_MAINNET]],
+    [HUSD, BDL],
   ],
   [ChainId.HECO_TESTNET]: [
     [
