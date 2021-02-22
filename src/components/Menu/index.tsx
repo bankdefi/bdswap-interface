@@ -116,6 +116,10 @@ export default function Menu() {
             <BookOpen size={14} />
             Docs
           </MenuItem>
+          <MenuItem id="link" href="https://t.me/BankDefiCommunity">
+            <MessageCircle size={14} />
+            Telegram
+          </MenuItem>
           <MenuItem id="link" href="https://github.com/bankdefi/bdswap-interface/discussions">
             <MessageCircle size={14} />
             Discussions
