@@ -27,7 +27,7 @@ const StatContainer = styled.div`
   margin-right: 1rem;
   margin-left: 1rem;
   ${({ theme }) => theme.mediaWidth.upToSmall`
-  display: none;
+  /*display: none;*/
 `};
 `
 
