@@ -349,7 +349,7 @@ export default function WalletModal({
           {walletView !== WALLET_VIEWS.PENDING && (
             <Blurb>
               <span>New to heco? &nbsp;</span>{' '}
-              <ExternalLink href="https://docs.hecochain.com/#/wallet/">Learn more about wallets</ExternalLink>
+              <ExternalLink href="https://docs.hecoinfo.com/#/wallet/">Learn more about wallets</ExternalLink>
             </Blurb>
           )}
         </ContentWrapper>

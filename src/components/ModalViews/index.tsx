@@ -64,7 +64,7 @@ export function SubmittedView({
         {children}
         {chainId && hash && (
           <ExternalLink href={getEtherscanLink(chainId, hash, 'transaction')} style={{ marginLeft: '4px' }}>
-            <TYPE.subHeader>View transaction on wanscan.org</TYPE.subHeader>
+            <TYPE.subHeader>View transaction on hecoinfo.com</TYPE.subHeader>
           </ExternalLink>
         )}
       </AutoColumn>

@@ -131,7 +131,7 @@ export default function UniBalanceContent({ setShowUniBalanceModal }: { setShowU
               <TYPE.white color="white">{totalSupply?.toFixed(0, { groupSeparator: ',' })}</TYPE.white>
             </RowBetween> */}
             {uni && uni.chainId === ChainId.HECO_MAINNET ? (
-              <ExternalLink href={`https://scan.hecochain.com/token/${uni.address}`}>View BDS Token Information</ExternalLink>
+              <ExternalLink href={`https://hecoinfo.com/token/${uni.address}`}>View BDS Token Information</ExternalLink>
             ) : null}
           </AutoColumn>
         </CardSection>

@@ -358,7 +358,7 @@ export default function Header() {
           {/* <StyledNavLink id={`stake-nav-link`} to={'/vote'}>
             {t('vote')}
           </StyledNavLink> */}
-          {/* <StyledExternalLink id={`stake-nav-link`} href={'https://www.wanscan.org'}>
+          {/* <StyledExternalLink id={`stake-nav-link`} href={'https://www.hecoinfo.com'}>
             Charts <span style={{ fontSize: '11px' }}>↗</span>
           </StyledExternalLink> */}
         </HeaderLinks>
