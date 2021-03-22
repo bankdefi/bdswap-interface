@@ -262,7 +262,7 @@ const StyledExternalLink = styled(ExternalLink).attrs({
   }
 
   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
-      display: none;
+      /*display: none;*/
 `}
 `
 
