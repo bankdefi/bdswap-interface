@@ -53,6 +53,15 @@
       "logoURI": "https://token-icons.vercel.app/icon/BTC.png"
     },
     {
+      "name": "Heco-Peg DOGE Token",
+      "address": "0x40280e26a572745b1152a54d1d44f365daa51618",
+      "symbol": "DOGE",
+      "decimals": 8,
+      "chainId": 128,
+      "logoURI": "https://token-icons.vercel.app/icon/DOGE.png"
+    },
+
+    {
       "chainId": 256,
       "address": "0x04f535663110a392a6504839beed34e019fdb4e0",
       "name": "USDT",
@@ -112,7 +121,7 @@
   ],
   "version": {
     "major": 3,
-    "minor": 2,
+    "minor": 3,
     "patch": 0
   }
 }
