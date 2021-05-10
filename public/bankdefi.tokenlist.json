@@ -60,6 +60,14 @@
       "chainId": 128,
       "logoURI": "https://token-icons.vercel.app/icon/DOGE.png"
     },
+    {
+      "name": "Poly-Peg SHIB",
+      "address": "0xc38072aa3f8e049de541223a9c9772132bb48634",
+      "symbol": "SHIB",
+      "decimals": 18,
+      "chainId": 128,
+      "logoURI": "https://token-icons.vercel.app/icon/SHIB.webp"
+    },
 
     {
       "chainId": 256,
@@ -121,7 +129,7 @@
   ],
   "version": {
     "major": 3,
-    "minor": 3,
+    "minor": 4,
     "patch": 0
   }
 }
