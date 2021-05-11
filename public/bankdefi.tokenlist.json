@@ -68,6 +68,22 @@
       "chainId": 128,
       "logoURI": "https://token-icons.vercel.app/icon/SHIB.webp"
     },
+    {
+      "name": "Dogeswap Token",
+      "address": "0x099626783842d35c221e5d01694c2b928eb3b0ad",
+      "symbol": "DOG",
+      "decimals": 18,
+      "chainId": 128,
+      "logoURI": "https://token-icons.vercel.app/icon/DOG.webp"
+    },
+    {
+      "name": "HTMoon",
+      "address": "0xb62e3b6a3866f5754fdefcf82e733310e2851043",
+      "symbol": "HTMoon",
+      "decimals": 9,
+      "chainId": 128,
+      "logoURI": "https://token-icons.vercel.app/icon/HTMoon.webp"
+    },
 
     {
       "chainId": 256,
@@ -129,7 +145,7 @@
   ],
   "version": {
     "major": 3,
-    "minor": 4,
+    "minor": 5,
     "patch": 0
   }
 }
