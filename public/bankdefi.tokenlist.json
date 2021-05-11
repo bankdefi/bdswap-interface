@@ -82,7 +82,7 @@
       "symbol": "HTMoon",
       "decimals": 9,
       "chainId": 128,
-      "logoURI": "https://token-icons.vercel.app/icon/HTMoon.webp"
+      "logoURI": "https://token-icons.vercel.app/icon/HTMoon.png"
     },
 
     {
@@ -146,6 +146,6 @@
   "version": {
     "major": 3,
     "minor": 5,
-    "patch": 0
+    "patch": 1
   }
 }
