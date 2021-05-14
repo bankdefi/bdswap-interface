@@ -71,7 +71,7 @@
     {
       "name": "Dogeswap Token",
       "address": "0x099626783842d35c221e5d01694c2b928eb3b0ad",
-      "symbol": "DOGSWAP",
+      "symbol": "Dogeswap",
       "decimals": 18,
       "chainId": 128,
       "logoURI": "https://token-icons.vercel.app/icon/DOG.webp"
@@ -153,7 +153,7 @@
   ],
   "version": {
     "major": 3,
-    "minor": 6,
-    "patch": 1
+    "minor": 7,
+    "patch": 0
   }
 }
